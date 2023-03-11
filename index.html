@@ -6,327 +6,148 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./servicesStyle.css">
-    <link rel="stylesheet" href="./portfolioStyle.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/servicesStyle.css">
+    <link rel="stylesheet" href="./styles/portfolioStyle.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="./scripts/nav.js"></script>
+    <script src="./scripts//service.js"></script>
+    <script src="./scripts/project.js"></script>
+    <script src="./scripts/script.js"></script>
   </head>
   <body>
+    <div id="main"></div>
 
     <!-- navigation -->
-    <nav>
-      <!-- <div>
-        <a>Home</a>
-      </div> -->
-      <div>
-        <ul class="nav justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#aboutme">About Me</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="portfolio">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <script id="navTemp" type="text/x-handlebars-template">
+      <nav id="nav">
+        <div>
+          <ul class="nav justify-content-center">
+            {{#each nav}}
+              <li class="nav-item">
+                <a class="nav-link" href={{href}}>{{name}}</a>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      </nav>
+    </script>
+
 
     <!-- landing -->
-    <section class="landing">
-      <div  class="bg-image d-flex position-relative"
-  style="background-image: url('images/best_ever.jpg');    
-  height: 500px; width: 100%; 
-  background-size: cover;
-  background-position: center;">
- 
- 
-  <div style="position: absolute; bottom: 10%; left: 2%; padding: 20px; color: rgb(0, 0, 0);">
-  <h1 >Salah Eddine Ait Daoud</h1>
-  <h3 >Data Science. Machine Learning. Software Engineering</h3>
-  </div>
-
-  </div>
-  </section>
-</div>
-
-
-      <div>
-
-      </div>
-    </section>
+    <script id="landingTemp" type="text/x-handlebars-template">
+      <section class="landing">
+        <div  class="bg-image d-flex position-relative"
+              style="background-image: url('images/best_ever.jpg'); height: 500px; width: 100%; 
+                      background-size: cover;
+                      background-position: center;">
+  
+          <div style="position: absolute; bottom: 10%; left: 2%; padding: 20px; color: rgb(0, 0, 0);">
+            <h1 >Salah Eddine Ait Daoud</h1>
+            <h3 >Data Science. Machine Learning. Software Engineering</h3>
+          </div>
+        </div>
+      </section>
+    </script>
 
     <!-- aboutme -->
-    <section id="aboutme">
-      <div class="container">
-        <div class="row">
-          <!-- <div class="col">
-            <img src="" alt="">
-          </div> -->
-          <div class="col-lg-12  text-center"style="width:65%; margin-left:auto;margin-right:auto; margin-top: 15px">
-            <h3>About Me</h3>
-            <p>Hello, my name is Salah, and I am a data scientist with a passion for using data-driven insights to solve complex business problems.
-            </p>
-            <p> In my previous roles, I have contributed to a variety of projects where I used my expertise in statistics, programming, and machine learning to analyze complex data sets, extract valuable insights, and develop predictive models to drive business decisions. 
-              I have a proven track record of delivering impactful results and pride myself on being a collaborative team player who works effectively with diverse groups of people.
-            </p>
-            <p>Beyond work, I stay up-to-date with the latest developments in data science by attending meetups and conferences. I am committed to continuous learning and improving my skills as a data scientist.
-            </p>
-            <hr style="width: 70%; height: 1px; border:none;color:#333;background-color:#333; margin-left: auto; margin-right: auto;">
+    <script id="aboutmeTemp" type="text/x-handlebars-template">
+      <section id="aboutme">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12  text-center"style="width:65%; margin-left:auto;margin-right:auto; margin-top: 15px">
+              <h3>About Me</h3>
+              <p>Hello, my name is Salah, and I am a data scientist with a passion for using data-driven insights to solve complex business problems.
+              </p>
+              <p> In my previous roles, I have contributed to a variety of projects where I used my expertise in statistics, programming, and machine learning to analyze complex data sets, extract valuable insights, and develop predictive models to drive business decisions. 
+                I have a proven track record of delivering impactful results and pride myself on being a collaborative team player who works effectively with diverse groups of people.
+              </p>
+              <p>Beyond work, I stay up-to-date with the latest developments in data science by attending meetups and conferences. I am committed to continuous learning and improving my skills as a data scientist.
+              </p>
+              <hr style="width: 70%; height: 1px; border:none;color:#333;background-color:#333; margin-left: auto; margin-right: auto;">
+            </div>
           </div>
+          {{> contact}}
         </div>
-        <div class="row">
-          <div class="col" style="margin-left: auto; margin-right: auto;">
-            <ul class="social-btns text-center" >
-              <li class="list-inline-item">
-                <a href="https://www.linkedin.com/in/salah-eddine-ait-daoud/">
-                  <img src="images/icons/linkedin.png" alt="linkedin" >
-                </a>  
-              </li>
-              <li class="list-inline-item social-buttons">
-                <a href="https://github.com/SalaheddineAD">
-                  <img src="images/icons/github.png" alt="github" >
-                </a>
-              </li>
-              <li class="list-inline-item social-buttons">
-                <a href="mailto:salaheddineaitdaoud@gmail.com">
-                  <img src="images/icons/email.png" alt="email">
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </script>
 
     <!-- services -->
-    <div id="services">
-      <div id="services-title" style="width:65%; margin-left:auto;margin-right:auto;">
-      <h3>Services</h3>
-      <p>With extensive knowledge and experience in machine learning and deep learning algorithms, 
-        I utilize Python and Power BI to expertly process data and create visually appealing and informative dashboards.</p>
-      </div>
-        <div class="scols">
-          <div class="scol" ontouchstart="this.classList.toggle('hover');">
-            <div class="scontainer">
-              <div class="sfront" style="background-image: url(https://unsplash.it/500/500/)">
-                <div class="sinner">
-                  <p>Data Management</p>
-                  <!-- <span>Lorem ipsum</span> -->
-                </div>
-              </div>
-              <div class="sback">
-                <div class="sinner"style="font-size: 18px;">
-                  <!-- <p>I conduct an analysis of your data, and distill the resulting insights into comprehensive reports.</p> -->
-                <p>Collecting and transforming data and developing automated workflows to streamline these processes</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="scol" ontouchstart="this.classList.toggle('hover');">
-            <div class="scontainer">
-              <div class="sfront" style="background-image: url(images/images_for_services/chess.jpg)">
-                <div class="sinner" style="font-size: 18px;">
-                  <p>Data Analytics</p>
-                  <span></span>
-                </div>
-              </div>
-              <div class="sback">
-                <div class="sinner" style="font-size: 18px;">
-                  <p >Utilizing Machine Learning and Deep Learning models to deliver state-of-the-art solutions</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="scol" ontouchstart="this.classList.toggle('hover');">
-            <div class="scontainer">
-              <div class="sfront" style="background-image: url(https://unsplash.it/502/502/)">
-                <div class="sinner" >
-                  <p>Data Analysis & Dashboarding</p>
-                  <span></span>
-                </div>
-              </div>
-              <div class="sback">
-                <div class="sinner" style="font-size: 18px;">
-                  <p>Analyzing data and delivering interactive dashboards to present current results in an engaging way.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="scol" ontouchstart="this.classList.toggle('hover');">
-            <div class="scontainer">
-              <div class="sfront" style="background-image: url(https://unsplash.it/503/503/)">
-                <div class="sinner" >
-                  <p>Teaching & Training</p>
-                  <!-- <span>Lorem ipsum</span> -->
-                </div>
-              </div>
-              <div class="sback">
-                <div class="sinner" style="font-size: 18px;">
-                  <p>Advising and coaching on AI & Machine Learning projects</p>
-                </div>
-              </div>
-            </div>
-          </div>
+    <script id="servicesTemp" type="text/x-handlebars-template">
+      <div id="services">
+        <div id="services-title" style="width:65%; margin-left:auto;margin-right:auto;">
+        <h3>Services</h3>
+        <p>With extensive knowledge and experience in machine learning and deep learning algorithms, 
+          I utilize Python and Power BI to expertly process data and create visually appealing and informative dashboards.</p>
         </div>
-     </div>
+          <div class="scols">
+            {{#each services}}
+              <div class="scol" ontouchstart="this.classList.toggle('hover');">
+                <div class="scontainer">
+                  <div class="sfront" style="background-image: url({{image}})">
+                    <div class="sinner">
+                      <p>{{title}}</p>
+                    </div>
+                  </div>
+                  <div class="sback">
+                    <div class="sinner"style="font-size: 18px;">
+                    <p>{{detail}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {{/each}}
+      </div>
+    </script>
 
     <!-- portfolio -->
-    <section id="portfolio">
-      <h3>Portfolio</h3>
-      <p>very skillful individual..!!</p>
-      <div id="p-container">
-        <div class="p-card">
-          <div class="card-thumb" style="background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/new-york-city.png') no-repeat center;"></div>
-          <div class="card-infos">
-            <h2 class="card-title">new york city<span class="card-flag"></span></h2>
-            <h3 class="card-company">november 2 - 4</h3>
-            <h3 class="card-detail">seats remaining: 2</h3>
-            <p class="card-txt">
-              Join us for our Live Infinity Session in
-              beautiful New York City. This is a 3 day
-              intensive workshop where you'll learn
-              how to become a better version of...
-            </p>
-            <h3 class="more-details">event details</h3>
-          </div>
+    <script id="portfolioTemp" type="text/x-handlebars-template">
+      <section id="portfolio">
+        <h3>Portfolio</h3>
+        <p>very skillful individual..!!</p>
+        <div id="p-container">
+          {{#each projects}}
+            <div class="p-card">
+              <div class="card-thumb" style="background: url({{image}}) no-repeat center;"></div>
+              <div class="card-infos">
+                <h2 class="card-title">{{title}}<span class="card-flag"></span></h2>
+                <h3 class="card-company">{{company}}</h3>
+                <h3 class="card-detail">{{detail}}</h3>
+                <p class="card-txt">{{text}}</p>
+                <h3 class="more-details">event details</h3>
+              </div>
+            </div>
+          {{/each}}
         </div>
-        <div class="p-card">
-          <div class="card-thumb"></div>
-          <div class="card-infos">
-            <h2 class="card-title">new york city<span class="card-flag"></span></h2>
-            <h3 class="card-company">november 2 - 4</h3>
-            <h3 class="card-detail">seats remaining: 2</h3>
-            <p class="card-txt">
-              Join us for our Live Infinity Session in
-              beautiful New York City. This is a 3 day
-              intensive workshop where you'll learn
-              how to become a better version of...
-            </p>
-            <h3 class="more-details">event details</h3>
-          </div>
-        </div>
-        <div class="p-card">
-          <div class="card-thumb"></div>
-          <div class="card-infos">
-            <h2 class="card-title">new york city<span class="card-flag"></span></h2>
-            <h3 class="card-company">november 2 - 4</h3>
-            <h3 class="card-detail">seats remaining: 2</h3>
-            <p class="card-txt">
-              Join us for our Live Infinity Session in
-              beautiful New York City. This is a 3 day
-              intensive workshop where you'll learn
-              how to become a better version of...
-            </p>
-            <h3 class="more-details">event details</h3>
-          </div>
-        </div>
-        <div class="p-card">
-          <div class="card-thumb"></div>
-          <div class="card-infos">
-            <h2 class="card-title">new york city<span class="card-flag"></span></h2>
-            <h3 class="card-company">november 2 - 4</h3>
-            <h3 class="card-detail">seats remaining: 2</h3>
-            <p class="card-txt">
-              Join us for our Live Infinity Session in
-              beautiful New York City. This is a 3 day
-              intensive workshop where you'll learn
-              how to become a better version of...
-            </p>
-            <h3 class="more-details">event details</h3>
-          </div>
-        </div>
-        <div class="p-card">
-          <div class="card-thumb"></div>
-          <div class="card-infos">
-            <h2 class="card-title">new york city<span class="card-flag"></span></h2>
-            <h3 class="card-company">november 2 - 4</h3>
-            <h3 class="card-detail">seats remaining: 2</h3>
-            <p class="card-txt">
-              Join us for our Live Infinity Session in
-              beautiful New York City. This is a 3 day
-              intensive workshop where you'll learn
-              how to become a better version of...
-            </p>
-            <h3 class="more-details">event details</h3>
-          </div>
-        </div>
-        <div class="p-card">
-          <div class="card-thumb"></div>
-          <div class="card-infos">
-            <h2 class="card-title">new york city<span class="card-flag"></span></h2>
-            <h3 class="card-company">november 2 - 4</h3>
-            <h3 class="card-detail">seats remaining: 2</h3>
-            <p class="card-txt">
-              Join us for our Live Infinity Session in
-              beautiful New York City. This is a 3 day
-              intensive workshop where you'll learn
-              how to become a better version of...
-            </p>
-            <h3 class="more-details">event details</h3>
-          </div>
-        </div>
-        <div class="p-card">
-          <div class="card-thumb"></div>
-          <div class="card-infos">
-            <h2 class="card-title">new york city<span class="card-flag"></span></h2>
-            <h3 class="card-company">november 2 - 4</h3>
-            <h3 class="card-detail">seats remaining: 2</h3>
-            <p class="card-txt">
-              Join us for our Live Infinity Session in
-              beautiful New York City. This is a 3 day
-              intensive workshop where you'll learn
-              how to become a better version of...
-            </p>
-            <h3 class="more-details">event details</h3>
-          </div>
-        </div>
-        <div class="p-card">
-          <div class="card-thumb"></div>
-          <div class="card-infos">
-            <h2 class="card-title">new york city<span class="card-flag"></span></h2>
-            <h3 class="card-company">november 2 - 4</h3>
-            <h3 class="card-detail">seats remaining: 2</h3>
-            <p class="card-txt">
-              Join us for our Live Infinity Session in
-              beautiful New York City. This is a 3 day
-              intensive workshop where you'll learn
-              how to become a better version of...
-            </p>
-            <h3 class="more-details">event details</h3>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </script>
 
     <!-- contact -->
-    <section id="contact" style="margin-top: 30px;">
-      <div>
-        <ul class="social-btns text-center" >
-          <li class="list-inline-item">
-            <a href="https://www.linkedin.com/in/salah-eddine-ait-daoud/">
-              <img src="images/icons/linkedin.png" alt="linkedin" >
-            </a>  
-          </li>
-          <li class="list-inline-item social-buttons">
-            <a href="https://github.com/SalaheddineAD">
-              <img src="images/icons/github.png" alt="github" >
-            </a>
-          </li>
-          <li class="list-inline-item social-buttons">
-            <a href="mailto:salaheddineaitdaoud@gmail.com">
-              <img src="images/icons/email.png" alt="email">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <script id="contactTemp" type="text/x-handlebars-template">
+      <section id="contact" style="margin-top: 30px;">
+        <div>
+          <ul class="social-btns text-center" >
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/salah-eddine-ait-daoud/">
+                <img src="images/icons/linkedin.png" alt="linkedin" >
+              </a>  
+            </li>
+            <li class="list-inline-item social-buttons">
+              <a href="https://github.com/SalaheddineAD">
+                <img src="images/icons/github.png" alt="github" >
+              </a>
+            </li>
+            <li class="list-inline-item social-buttons">
+              <a href="mailto:salaheddineaitdaoud@gmail.com">
+                <img src="images/icons/email.png" alt="email">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </script>
 
     <!-- footer -->
     <footer>
