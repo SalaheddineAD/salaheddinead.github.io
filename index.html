@@ -16,6 +16,9 @@
     <script src="./scripts//service.js"></script>
     <script src="./scripts/project.js"></script>
     <script src="./scripts/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha384-Izjw8f+ua7Kw1TIq0v8FqFjcJ6pajs/rfdfs3SO+kD4Ck5BdPtF+to8xMp9VmEzo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"></script>
+
   </head>
   <body>
     <div id="main"></div>
@@ -112,11 +115,13 @@
             <div class="p-card">
               <div class="card-thumb" style="background: url({{image}}) no-repeat center;"></div>
               <div class="card-infos">
-                <h2 class="card-title">{{title}}<span class="card-flag"></span></h2>
+                <h2 class="card-title">{{title}}</h2>
                 <h3 class="card-company">{{company}}</h3>
                 <h3 class="card-detail">{{detail}}</h3>
                 <p class="card-txt">{{text}}</p>
-                <h3 class="more-details">event details</h3>
+                <a href="{{pageUrl}}" target="_blank">
+                  <button type="button" class="btn btn-outline-secondary" >more details</button>
+                </a>              
               </div>
             </div>
           {{/each}}
@@ -153,5 +158,23 @@
     <footer>
       <p>Salah 2023</p>
     </footer>
+    <!-- Event Details Modal -->
+    <div class="modal fade" id="eventDetailsModal" tabindex="-1" role="dialog" aria-labelledby="eventDetailsModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="eventDetailsModalLabel">Event Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Insert event details here.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>

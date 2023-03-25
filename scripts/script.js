@@ -25,5 +25,5 @@ $(() => {
 
   // load contact
   const contactTemp = Handlebars.compile($('#contactTemp').html());
-  $('#main').append(contactTemp());
+  $('#main').append(contactTemp()); 
 });

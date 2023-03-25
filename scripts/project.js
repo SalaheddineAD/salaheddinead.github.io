@@ -1,30 +1,82 @@
 const projects = [
   {
-    image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/new-york-city.png",
-    title: "new york city",
+    image: "images/images_for_projects/BankCustomerSegmentation.jpg",
+    title: "Bank Customer Segmentation",
     company: "november 2 - 4",
     detail: "seats remaining: 2",
-    text: "Join us for our Live Infinity Session in beautiful New York City. This is a 3 day intensive workshop where you'll learn how to become a better version of..."
+    text: "",
+    pageUrl: "BankCustomerSegmentation.html"
+  },
+  {
+    image: "images/images_for_projects/InvestmentForecasting.jpg",
+    title: "Investment Intentions Forecasting",
+    company: "november 2 - 4",
+    detail: "seats remaining: 2",
+    text: "",
+    pageUrl: "InvestmentIntentionsForecasting.html"
+  },
+  {
+    image: "images/images_for_projects/EnergyForecasting.jpg",
+    title: "Energy Production, consumption and demand Forecasting",
+    company: "november 2 - 4",
+    detail: "seats remaining: 2",
+    text: "",
+    pageUrl: "EnergyForecasting.html"
   },
   {
     image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/new-york-city.png",
-    title: "new york city",
+    title: "Urban Mobility Analysis",
     company: "november 2 - 4",
     detail: "seats remaining: 2",
-    text: "Join us for our Live Infinity Session in beautiful New York City. This is a 3 day intensive workshop where you'll learn how to become a better version of..."
+    text: "",    
+    pageUrl: "UrbanMobilityAnalysis.html"
   },
   {
     image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/new-york-city.png",
-    title: "new york city",
+    title: "Revenue Forecasting",
     company: "november 2 - 4",
     detail: "seats remaining: 2",
-    text: "Join us for our Live Infinity Session in beautiful New York City. This is a 3 day intensive workshop where you'll learn how to become a better version of..."
+    text: "",    
+    pageUrl: "revenueForecasting.html"
   },
   {
     image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/new-york-city.png",
-    title: "new york city",
+    title: "Energy Production Forecasting",
     company: "november 2 - 4",
     detail: "seats remaining: 2",
-    text: "Join us for our Live Infinity Session in beautiful New York City. This is a 3 day intensive workshop where you'll learn how to become a better version of..."
+    text: "",    
+    pageUrl: "EnergyProductionForecasting.html"
+  },
+  {
+    image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/new-york-city.png",
+    title: "Fraudulent Automobile Claims Detection",
+    company: "november 2 - 4",
+    detail: "seats remaining: 2",
+    text: "",    
+    pageUrl: "FraudDetection.html"
+  },
+  {
+    image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/new-york-city.png",
+    title: "Students Grades Forecasting",//might need to change this one
+    company: "november 2 - 4",
+    detail: "seats remaining: 2",
+    text: "",    
+    pageUrl: "StudentsGradesForecasting.html"
+  },  
+  {
+    image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/new-york-city.png",
+    title: "Object Detection",
+    company: "november 2 - 4",
+    detail: "seats remaining: 2",
+    text: "",    
+    pageUrl: "ObjectDetection.html"
+  },
+  {
+    image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/new-york-city.png",
+    title: "Drowsiness Detection",
+    company: "november 2 - 4",
+    detail: "seats remaining: 2",
+    text: "",    
+    pageUrl: "DrowsinessDetection.html"
   }
 ]
