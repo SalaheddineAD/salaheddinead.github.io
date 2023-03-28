@@ -29,7 +29,7 @@ $(() => {
 
   changeNavOnScroll();
 
-  modalHandler();
+  // modalHandler();
 });
 
 
@@ -52,21 +52,40 @@ function changeNavOnScroll(){
     }
   });
 }
-function modalHandler(){
-  var myModal = new bootstrap.Modal(document.getElementById('project-modal'), {
-    keyboard: false
-  });
+// function modalHandler(){
+//   var myModal = new bootstrap.Modal(document.getElementById('project-modal'), {
+//     keyboard: false
+//   });
 
-  // Handle the modal show event
-  $('#project-modal').on('show.bs.modal', function (event) {
-    var button = $(event.relatedTarget); // Button that triggered the modal
-    var title = button.siblings('.card-title').text(); // Extract the project title
-    var body = button.siblings('.card-txt').text(); // Extract the project details
-    var modalTitle = myModal._element.querySelector('.modal-title'); // Get the modal title element
-    var modalBody = myModal._element.querySelector('.modal-body'); // Get the modal body element
+//   // Handle the modal show event
+//   $('#myModal').on('show.bs.modal', function (event) {
+//     var button = $(event.relatedTarget); // Button that triggered the modal
+//     var title = button.siblings('.card-title').text(); // Extract the project title
+//     var body = button.siblings('.card-txt').text(); // Extract the project details
+//     var modalTitle = myModal._element.querySelector('.modal-title'); // Get the modal title element
+//     var modalBody = myModal._element.querySelector('.modal-body'); // Get the modal body element
 
-    // Set the modal title and body
-    modalTitle.textContent = title;
-    modalBody.innerHTML = body;
-  });
+//     // Set the modal title and body
+//     modalTitle.textContent = title;
+//     modalBody.innerHTML = body;
+//   });
+// }
+function setModal(){
+  var btn = document.getElementById("project-btn");
+  var modal = document.getElementById("project-modal");
+  var span = document.getElementsByClassName("close")[0];
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
 }

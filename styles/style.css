@@ -32,9 +32,10 @@ hr{
   margin-right: auto;
 }
 #aboutme{
-  height: 91vh; 
+  height: 90vh; 
   width: 100vw; 
-  padding-top: 10%;
+  min-height: 600px; 
+  padding-top: 10vh;
   background-color: #f1f5f9;
 }
 .scrolled-navbar{
@@ -43,9 +44,11 @@ hr{
   box-shadow: 0, 3px, 10px, rgba(0, 0, 0, 0.15);
 }
 #services{
-  height: 91vh; 
+  height: 90vh; 
   width: 100vw; 
-  padding-top: 7%; 
+  padding-top: 7vh; 
+  margin-bottom: 1px;
+  min-height: 600px; 
   
 }
 
