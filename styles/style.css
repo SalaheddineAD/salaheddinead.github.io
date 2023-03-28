@@ -6,3 +6,63 @@
 .box {
   border: 1px solid black;
 }
+
+#landing-div{
+  background-image: url('../images/best_ever.jpg'); 
+  height: 100vh; 
+  width: 100vw; 
+  background-size: cover;
+  background-position: center;
+}
+
+#landing-div-title{
+  position: absolute; 
+  bottom: 25%; 
+  left: 4%; 
+  padding: 20px; 
+  color: rgb(0, 0, 0);
+}
+hr{
+  width: 70%; 
+  height: 1px; 
+  border:none;
+  color:#333;
+  background-color:#333; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+#aboutme{
+  height: 91vh; 
+  width: 100vw; 
+  padding-top: 10%;
+  background-color: #f1f5f9;
+}
+.scrolled-navbar{
+  background-color: black;
+  color: #ffffff;
+  box-shadow: 0, 3px, 10px, rgba(0, 0, 0, 0.15);
+}
+#services{
+  height: 91vh; 
+  width: 100vw; 
+  padding-top: 7%; 
+  
+}
+
+.smooth-transition{
+  transition: all 0.5s ease;
+}
+.nav-element{
+  color:black;
+
+}
+.scrolled-nav-element{
+  color:white;
+
+}
+.nav-bar {
+  height: 8%; /* change the height as desired */
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
