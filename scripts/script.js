@@ -23,9 +23,14 @@ $(() => {
   const portfolioTemp = Handlebars.compile($('#portfolioTemp').html());
   $('#main').append(portfolioTemp({'projects': projects}));
 
-  // load contact
+  // load footer
+  const footerTemp = Handlebars.compile($('#footerTemp').html());
+  $('#main').append(footerTemp());
+
+  // load contact into footer
   const contactTemp = Handlebars.compile($('#contactTemp').html());
-  $('#main').append(contactTemp()); 
+  $('footer').append(contactTemp());
+
 
   changeNavOnScroll();
 });

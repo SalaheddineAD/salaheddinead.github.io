@@ -1,3 +1,15 @@
+.scroller {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  /* scroll-padding: 60px; */
+}
+
+.scrollerSection {
+  /* height: 100vh; */
+  scroll-snap-align: start;
+}
+
 #landing {
   border: 1px solid black;
   height: 200px;
@@ -7,78 +19,111 @@
   border: 1px solid black;
 }
 
-#landing-div{
-  background-image: url('../images/best_ever.jpg'); 
-  height: 38vh;
-  min-height: 400px;
-  width: 100%; 
+#landing-div {
+  background-image: url('../images/best_ever.jpg');
+  /* height: 38vh; */
+  /* min-height: 400px; */
+  width: 100%;
   background-size: cover;
   background-position: center;
+  height: 100vh;
 }
 
-#landing-div-title{
-  position: absolute; 
-  bottom: 34%; 
-  left: 4%; 
-  padding: 20px; 
+#landing-div-title {
+  position: absolute;
+  bottom: 34%;
+  left: 4%;
+  padding: 20px;
   color: rgb(0, 0, 0);
 }
-hr{
-  width: 70%; 
-  height: 1px; 
-  border:none;
-  color:#333;
-  background-color:#333; 
-  margin-left: auto; 
+
+hr {
+  /* width: 70%; 
+  height: 1px;  */
+  border: none;
+  color: #333;
+  background-color: #333;
+  margin-left: auto;
   margin-right: auto;
 }
-#aboutme{
-  width: 100%;
-  padding-top: 5%;
-  padding-bottom: 5%;
+
+#aboutme {
+  /* height: 90vh; 
+  width: 100vw; 
+  min-height: 600px; 
+  padding-top: 10vh; */
   background-color: #f1f5f9;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  padding-top: 2rem;
 }
-.scrolled-navbar{
+
+.scrolled-navbar {
   background-color: black;
   color: #ffffff;
   box-shadow: 0, 3px, 10px, rgba(0, 0, 0, 0.15);
 }
-#services{
+
+/* #services{
+  height: 90vh; 
+  width: 100vw; 
   width: 100%;  
   padding-top: 7vh; 
   padding-bottom: 5%;  
-}
+} */
 
 
-.smooth-transition{
+.smooth-transition {
   transition: all 0.5s ease;
 }
-.nav-element{
-  color:black;
+
+.nav-element {
+  color: black;
 
 }
-.scrolled-nav-element{ 
-  color:white;
+
+.scrolled-nav-element {
+  color: white;
 
 }
+
 .nav-bar {
-   /* change the height as desired */
+  /* change the height as desired */
   min-height: 50px;
   display: flex;
   align-items: center;
   color: #000000;
 }
-@media (min-width: 1023px) {
+
+
+/* @media (min-width: 1023px) {
   #services {
     height: 92vh;
-    min-height: 600px; 
+    min-height: 600px;
   }
-  #aboutme{
-    height: 92vh; 
-    min-height: 600px; 
+
+  #aboutme {
+    height: 92vh;
+    min-height: 600px;
   }
-  #landing-div{
-    height: 100vh; 
-    min-height: 400px; 
+
+  #landing-div {
+    height: 100vh;
+    min-height: 400px;
+  }
+} */
+
+@media (max-width: 900px) {
+  #landing-div {
+    height: 38vh;
+  }
+
+  #landing-div-title {
+    bottom: 0;
+  }
+
+  #aboutme {
+    height: max-content;
   }
 }

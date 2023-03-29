@@ -13,12 +13,15 @@
   margin: 5% auto;
   max-width: 80rem;
   text-align: center;
+  padding-top: 4rem;
 }
-#p-container{
+
+#p-container {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+
 .p-card {
   width: 350px;
   height: 350px;
@@ -27,6 +30,7 @@
   overflow: hidden;
   margin-bottom: 2%;
 }
+
 .p-card .card-thumb {
   width: auto;
   height: 260px;
@@ -34,6 +38,7 @@
   background-size: cover;
   border-radius: 3px;
 }
+
 .p-card .card-infos {
   width: auto;
   height: 350px;
@@ -42,6 +47,7 @@
   background: #fff;
   transition: 0.4s 0.15s cubic-bezier(0.17, 0.67, 0.5, 1.03);
 }
+
 .p-card .card-infos .card-title {
   position: relative;
   margin: 10px 0;
@@ -52,6 +58,7 @@
   text-transform: uppercase;
   text-shadow: 0 0 0px #32577f;
 }
+
 .p-card .card-infos .card-flag {
   position: absolute;
   top: 50%;
@@ -63,13 +70,16 @@
   background-size: 100% auto;
   display: inline-block;
 }
-.p-card .card-infos .card-company, .p-card .card-infos .card-detail {
+
+.p-card .card-infos .card-company,
+.p-card .card-infos .card-detail {
   margin-bottom: 10px;
   text-transform: uppercase;
   font-size: 0.85rem;
   color: rgba(21, 37, 54, .7);
   font-family: 'Grotesque', sans-serif;
 }
+
 .p-card .card-infos .card-detail {
   display: inline-block;
   margin-bottom: 24px;
@@ -78,6 +88,7 @@
   opacity: 0;
   transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
 }
+
 .p-card .card-infos .card-txt {
   font-family: 'Merriweather', sans-serif;
   line-height: 2;
@@ -86,6 +97,7 @@
   opacity: 0;
   transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
 }
+
 .p-card .card-infos .more-details {
   position: absolute;
   left: 0;
@@ -102,9 +114,13 @@
   opacity: 0;
   transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
 }
+
 .p-card:hover .card-infos {
   transform: translateY(-260px);
 }
-.p-card:hover .card-infos .card-detail, .p-card:hover .card-infos .card-txt, .p-card:hover .card-infos .more-details {
+
+.p-card:hover .card-infos .card-detail,
+.p-card:hover .card-infos .card-txt,
+.p-card:hover .card-infos .more-details {
   opacity: 1;
 }
