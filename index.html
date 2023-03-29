@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="stylesheet" href="./styles/servicesStyle.css">
   <link rel="stylesheet" href="./styles/portfolioStyle.css">
+  <link rel="stylesheet" href="./styles/popupStyle.css">
 
   <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
     crossorigin="anonymous"></script>
@@ -19,12 +20,13 @@
   <script src="./scripts/nav.js"></script>
   <script src="./scripts//service.js"></script>
   <script src="./scripts/project.js"></script>
+  <script src="./scripts//pdetails.js"></script>
   <script src="./scripts/script.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script> -->
 
 </head>
 
@@ -132,7 +134,7 @@
                 <h3 class="card-company">{{company}}</h3>
                 <h3 class="card-detail">{{detail}}</h3>
                 <p class="card-txt">{{text}}</p>
-                  <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#myModal" >more details</button>
+                <a id={{id}} class="p-btn popup-btn" href="#">More Details</a>
               </div>
             </div>
           {{/each}}
@@ -141,26 +143,31 @@
     </div>
   </script>
 
-  <!-- Modal -->
-  <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalitle" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="myModalTitle">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
+  <!-- popup for project details -->
+  <div class="popup-wrap">
+    <div class="popup-box">
+    </div>
+  </div>
+
+  <script id="popupDetailsTemp" type="text/x-handlebars-template">
+    <div>
+      <h2>{{title}}</h2>
+      <h3>{{role}}</h3>
+      <p>{{objective}}</p>
+      <ol>
+        {{#each methodologies}}
+          <li>{{title}}</li>
+          <ul>
+            {{#each details}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        {{/each}}
+      </ol>
+      <p>{{result}}</p>
+    </div>
+    <a class="close-btn popup-close" href="#">x</a>
+  </script>
 
   <!-- contact -->
   <script id="contactTemp" type="text/x-handlebars-template">
@@ -198,25 +205,6 @@
       </footer>
     </div>
   </script>
-
-
-  <!-- Event Details Modal -->
-  <!-- <div class="modal fade" id="eventDetailsModal" tabindex="-1" role="dialog" aria-labelledby="eventDetailsModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="eventDetailsModalLabel">Event Details</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p>Insert event details here.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
 </body>
 
