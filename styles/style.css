@@ -9,15 +9,16 @@
 
 #landing-div{
   background-image: url('../images/best_ever.jpg'); 
-  height: 100vh; 
-  width: 100vw; 
+  height: 38vh;
+  min-height: 400px;
+  width: 100%; 
   background-size: cover;
   background-position: center;
 }
 
 #landing-div-title{
   position: absolute; 
-  bottom: 25%; 
+  bottom: 34%; 
   left: 4%; 
   padding: 20px; 
   color: rgb(0, 0, 0);
@@ -32,10 +33,9 @@ hr{
   margin-right: auto;
 }
 #aboutme{
-  height: 90vh; 
-  width: 100vw; 
-  min-height: 600px; 
-  padding-top: 10vh;
+  width: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   background-color: #f1f5f9;
 }
 .scrolled-navbar{
@@ -44,13 +44,11 @@ hr{
   box-shadow: 0, 3px, 10px, rgba(0, 0, 0, 0.15);
 }
 #services{
-  height: 90vh; 
-  width: 100vw; 
+  width: 100%;  
   padding-top: 7vh; 
-  margin-bottom: 1px;
-  min-height: 600px; 
-  
+  padding-bottom: 5%;  
 }
+
 
 .smooth-transition{
   transition: all 0.5s ease;
@@ -59,13 +57,28 @@ hr{
   color:black;
 
 }
-.scrolled-nav-element{
+.scrolled-nav-element{ 
   color:white;
 
 }
 .nav-bar {
-  height: 8%; /* change the height as desired */
+   /* change the height as desired */
+  min-height: 50px;
   display: flex;
   align-items: center;
   color: #000000;
+}
+@media (min-width: 1023px) {
+  #services {
+    height: 92vh;
+    min-height: 600px; 
+  }
+  #aboutme{
+    height: 92vh; 
+    min-height: 600px; 
+  }
+  #landing-div{
+    height: 100vh; 
+    min-height: 400px; 
+  }
 }
