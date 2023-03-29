@@ -58,7 +58,7 @@ function changeNavOnScroll() {
 }
 
 function openPopupHandler(e) {
-  const details = pdetails[this.id - 1];
+  const details = pdetails.filter(p => p.id == this.id)[0];
   const popupDetailsTemp = Handlebars.compile($('#popupDetailsTemp').html());
   $('.popup-box').append(popupDetailsTemp(details));
   $('.popup-wrap').fadeIn(500);
