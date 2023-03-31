@@ -42,17 +42,20 @@ function changeNavOnScroll() {
   const navElement = document.querySelectorAll(".nav-element")
 
   window.addEventListener("scroll", () => {
+    console.log("scrolled");
     if (window.scrollY > 56) {
       nav.classList.add('scrolled-navbar')
       navElement.forEach(element => {
         element.classList.add('scrolled-nav-element')
       });
+      console.log("scrolled");
     }
     else {
       nav.classList.remove('scrolled-navbar')
       navElement.array.forEach(element => {
         element.classList.remove('scrolled-nav-element')
       });
+      console.log("not scrolled");
     }
   });
 }

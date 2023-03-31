@@ -124,11 +124,10 @@
     <div class="scrollerSection">
       <section id="portfolio">
         <h3>Portfolio</h3>
-        <p>very skillful individual..!!</p>
         <div id="p-container">
           {{#each projects}}
             <div class="p-card">
-              <div class="card-thumb" style="background: url({{image}}) no-repeat center;"></div>
+                <div class="card-thumb" style="background: url({{image}}) no-repeat center/100% 100%;"></div>
               <div class="card-infos">
                 <h2 class="card-title">{{title}}</h2>
                 <h3 class="card-company">{{company}}</h3>
@@ -166,7 +165,7 @@
       </ol>
       <p>{{result}}</p>
     </div>
-    <a class="close-btn popup-close" href="#">x</a>
+    <a class="close-btn popup-close" href="#">X</a>
   </script>
 
   <!-- contact -->

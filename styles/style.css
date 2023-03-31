@@ -1,3 +1,6 @@
+*{
+  /* font-family: ; */
+}
 .scroller {
   height: 100vh;
   overflow-y: scroll;
@@ -96,23 +99,6 @@ hr {
   color: #000000;
 }
 
-
-/* @media (min-width: 1023px) {
-  #services {
-    height: 92vh;
-    min-height: 600px;
-  }
-
-  #aboutme {
-    height: 92vh;
-    min-height: 600px;
-  }
-
-  #landing-div {
-    height: 100vh;
-    min-height: 400px;
-  }
-} */
 
 @media (max-width: 900px) {
   #landing-div {
