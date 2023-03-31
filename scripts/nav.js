@@ -9,7 +9,7 @@ const navs = [
   },
   {
     "name": "Services",
-    "href": "#service"
+    "href": "#services"
   },
   {
     "name": "Portfolio",
