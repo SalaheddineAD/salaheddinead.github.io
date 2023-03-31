@@ -5,12 +5,16 @@
   -webkit-transition: all linear 0.15s;
   transition: all linear 0.15s;
   border-radius: 3px;
-  background: aliceblue;
+  /* background: aliceblue; */
   font-size: 22px;
   /* font-weight: bold; */
   text-decoration: none;
   text-transform: uppercase;
-  color: #333;
+  /* color: #333; */
+
+  color: #212529;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa
 }
 
 .p-btn:hover {

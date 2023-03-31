@@ -38,26 +38,25 @@ $(() => {
 
 
 function changeNavOnScroll() {
-  const nav = document.querySelector("#nav")
+  // const nav = document.querySelector("#nav")
+  const nav = $('#nav');
   const navElement = document.querySelectorAll(".nav-element")
+  const landingSection = document.querySelector('.landing');
 
-  window.addEventListener("scroll", () => {
-    console.log("scrolled");
-    if (window.scrollY > 56) {
-      nav.classList.add('scrolled-navbar')
+  // window.addEventListener("scroll", () => {
+  window.onwheel = (e) => {
+    if (landingSection.getBoundingClientRect().top == 0) {
+      nav.removeClass('scrolled-navbar')
+      navElement.forEach(element => {
+        element.classList.remove('scrolled-nav-element')
+      });
+    } else {
+      nav.addClass('scrolled-navbar')
       navElement.forEach(element => {
         element.classList.add('scrolled-nav-element')
       });
-      console.log("scrolled");
     }
-    else {
-      nav.classList.remove('scrolled-navbar')
-      navElement.array.forEach(element => {
-        element.classList.remove('scrolled-nav-element')
-      });
-      console.log("not scrolled");
-    }
-  });
+  };
 }
 
 function openPopupHandler(e) {
@@ -67,6 +66,7 @@ function openPopupHandler(e) {
   $('.popup-wrap').fadeIn(500);
   $('.popup-box').removeClass('transform-out').addClass('transform-in');
   $('.popup-close').click(closePopupHandler);
+  $('.popup-wrap').click(closePopupHandler);
   e.preventDefault();
 }
 

@@ -1,6 +1,7 @@
-*{
-  /* font-family: ; */
+* {
+  font-family: sans-serif;
 }
+
 .scroller {
   height: 100vh;
   overflow-y: scroll;
@@ -62,11 +63,23 @@ hr {
   padding-top: 2rem;
 }
 
+.nav-bar {
+  height: 8%;
+  /* change the height as desired */
+  /* change the height as desired */
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  background-color: transparent;
+}
+
 .scrolled-navbar {
   background-color: black;
   color: #ffffff;
   box-shadow: 0, 3px, 10px, rgba(0, 0, 0, 0.15);
 }
+
 
 /* #services{
   height: 90vh; 
@@ -91,13 +104,13 @@ hr {
 
 }
 
-.nav-bar {
-  /* change the height as desired */
+/* .nav-bar {
   min-height: 50px;
   display: flex;
   align-items: center;
   color: #000000;
-}
+} */
+
 
 
 @media (max-width: 900px) {

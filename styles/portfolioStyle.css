@@ -34,8 +34,11 @@
 .p-card .card-thumb {
   width: auto;
   height: 260px;
+  /* width: auto;
+  height: 100px; */
   /* background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/new-york-city.png") no-repeat center; */
-  background-size: cover;
+  /* background-size: cover; */
+  /* background-size: 100% auto; */
   border-radius: 3px;
   background-position: center;
 }
@@ -54,7 +57,7 @@
   margin: 10px 0;
   letter-spacing: 3px;
   color: #152536;
-  font-family: 'Grotesque Black', sans-serif;
+  /* font-family: 'Grotesque Black', sans-serif; */
   font-size: 1rem;
   text-transform: uppercase;
   text-shadow: 0 0 0px #32577f;
@@ -67,7 +70,7 @@
   transform: translateY(-50%);
   width: 35px;
   height: 23px;
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/flag.png") no-repeat top right;
+  /* background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/flag.png") no-repeat top right; */
   background-size: 100% auto;
   display: inline-block;
 }
@@ -78,7 +81,7 @@
   text-transform: uppercase;
   font-size: 0.85rem;
   color: rgba(21, 37, 54, .7);
-  font-family: 'Grotesque', sans-serif;
+  /* font-family: 'Grotesque', sans-serif; */
 }
 
 .p-card .card-infos .card-detail {
@@ -91,7 +94,7 @@
 }
 
 .p-card .card-infos .card-txt {
-  font-family: 'Merriweather', sans-serif;
+  /* font-family: 'Merriweather', sans-serif; */
   line-height: 2;
   font-size: 0.95rem;
   color: rgba(21, 37, 54, .7);
@@ -108,7 +111,7 @@
   padding: 20px 24px;
   letter-spacing: 1px;
   color: #4e958b;
-  font-family: 'Grotesque Black', sans-serif;
+  /* font-family: 'Grotesque Black', sans-serif; */
   font-size: 0.9rem;
   text-transform: uppercase;
   cursor: pointer;

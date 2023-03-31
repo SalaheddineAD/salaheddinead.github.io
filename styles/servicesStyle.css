@@ -13,7 +13,7 @@
 
 #services h3 {
   font-size: 2.5rem;
-  font-family: 'Montserrat';
+  /* font-family: 'Montserrat'; */
   font-weight: normal;
   color: #444;
   text-align: center;
@@ -179,7 +179,7 @@
 
 .sfront .sinner span {
   color: rgba(255, 255, 255, 0.7);
-  font-family: 'Montserrat';
+  /* font-family: 'Montserrat'; */
   font-weight: 300;
 }
 
