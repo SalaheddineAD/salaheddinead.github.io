@@ -64,14 +64,15 @@ hr {
 }
 
 .nav-bar {
-  height: 8%;
+  /* height: 8%; */
   /* change the height as desired */
   /* change the height as desired */
-  min-height: 50px;
+  /* min-height: 50px; */
   display: flex;
   align-items: center;
   color: #000000;
   background-color: transparent;
+  font-size: 20px;
 }
 
 .scrolled-navbar {
@@ -124,5 +125,11 @@ hr {
 
   #aboutme {
     height: max-content;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-bar {
+    font-size: x-small;
   }
 }
