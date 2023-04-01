@@ -126,6 +126,10 @@ hr {
   #aboutme {
     height: max-content;
   }
+
+  .scroller {
+    scroll-snap-type: none;
+  }
 }
 
 @media (max-width: 600px) {
