@@ -131,7 +131,7 @@
               <div class="card-infos">
                 <h2 class="card-title">{{title}}</h2>
                 <h3 class="card-company">{{company}}</h3>
-                <h3 class="card-detail">{{detail}}</h3>
+                <!-- <h3 class="card-detail">{{detail}}</h3> -->
                 <p class="card-txt">{{text}}</p>
                 <a id={{id}} class="p-btn popup-btn" href="#">More Details</a>
               </div>
@@ -152,19 +152,11 @@
     <div>
       <h2>{{title}}</h2>
       <h3>{{role}}</h3>
-      <p>{{objective}}</p>
-      <ol>
-        {{#each methodologies}}
-          <li>{{title}}</li>
-          <ul>
-            {{#each details}}
-              <li>{{this}}</li>
-            {{/each}}
-          </ul>
-        {{/each}}
-      </ol>
-      <p>{{result}}</p>
-    </div>
+      <h6>Description</h6>
+      {{#each Description}}
+        <p>{{this}}</p>
+      {{/each}}
+      </div>
     <a class="close-btn popup-close" href="#">X</a>
   </script>
 
