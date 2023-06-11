@@ -12,11 +12,15 @@ const navs = [
     "href": "#services"
   },
   {
-    "name": "Portfolio",
-    "href": "#portfolio"
+    "name": "Work",
+    "href": "#work"
+  },
+  {
+    "name": "Porfolio",
+    "href": "#porfolio"
   },
   {
     "name": "Contact",
-    "href": "#contact"
+    "href": "#footer"
   }
 ];

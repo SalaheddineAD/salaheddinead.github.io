@@ -1,5 +1,4 @@
 $(() => {
-  console.log("hello");
 
   // load nav
   const navTemp = Handlebars.compile($('#navTemp').html());
@@ -19,7 +18,7 @@ $(() => {
   $('#main').append(servicesTemp({ 'services': services }));
 
   // load portfolio
-  const portfolioTemp = Handlebars.compile($('#portfolioTemp').html());
+  const portfolioTemp = Handlebars.compile($('#workTemp').html());
   $('#main').append(portfolioTemp({ 'projects': projects }));
 
   // load footer
@@ -28,8 +27,9 @@ $(() => {
 
   // load contact into footer
   const contactTemp = Handlebars.compile($('#contactTemp').html());
-  $('footer').append(contactTemp());
+  // $('footer').append(contactTemp());
 
+  console.log("hello");
 
   changeNavOnScroll();
 

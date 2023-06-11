@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./styles/servicesStyle.css">
   <link rel="stylesheet" href="./styles/portfolioStyle.css">
   <link rel="stylesheet" href="./styles/popupStyle.css">
+  <link rel="stylesheet" href="./styles/footer.css">
 
   <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
     crossorigin="anonymous"></script>
@@ -72,7 +73,7 @@
           <div class="row">
             <div class="col-lg-12  text-center"style="width:65%; margin-left:auto;margin-right:auto; margin-top: 15px">
               <h3>About Me</h3>
-              <p>Hello, my name is Salah, and I am a data scientist with a passion for using data-driven insights to solve complex business problems.
+              <p>Hello, my name is Salah, and I am a data scientist with 2 years of experience in many industries such as insurance, banking, retail, energy, tourism, transportation, consulting and research. I am passionate about using data-driven insights to solve complex business problems.
               </p>
               <p> In my previous roles, I have contributed to a variety of projects where I used my expertise in statistics, programming, and machine learning to analyze complex data sets, extract valuable insights, and develop predictive models to drive business decisions. 
                 I have a proven track record of delivering impactful results and pride myself on being a collaborative team player who works effectively with diverse groups of people.
@@ -119,11 +120,11 @@
     </div>
   </script>
 
-  <!-- portfolio -->
-  <script id="portfolioTemp" type="text/x-handlebars-template">
+  <!-- work -->
+  <script id="workTemp" type="text/x-handlebars-template">
     <div class="scrollerSection">
-      <section id="portfolio">
-        <h3>Portfolio</h3>
+      <section id="work">
+        <h3>Work</h3>
         <div id="p-container">
           {{#each projects}}
             <div class="p-card">
@@ -160,42 +161,136 @@
     <a class="close-btn popup-close" href="#">X</a>
   </script>
 
-  <!-- contact -->
-  <script id="contactTemp" type="text/x-handlebars-template">
-    <section id="contact" style="margin-top: 30px;">
-      <div>
-        <ul class="social-btns text-center" >
-          <li class="list-inline-item">
-            <a href="https://www.linkedin.com/in/salah-eddine-ait-daoud/">
-              <img src="images/icons/linkedin.png" alt="linkedin" >
-            </a>  
-          </li>
-          <li class="list-inline-item social-buttons">
-            <a href="https://github.com/SalaheddineAD">
-              <img src="images/icons/github.png" alt="github" >
-            </a>
-          </li>
-          <li class="list-inline-item social-buttons">
-            <a href="mailto:salaheddineaitdaoud@gmail.com">
-              <img src="images/icons/email.png" alt="email">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </script>
+<!-- contact -->
 
+<script id="contactTemp" type="text/x-handlebars-template">
+  <section id="contact" style="margin-top: 30px;">
+    <div>
+      <ul class="social-btns text-center" >
+        <li class="list-inline-item">
+          <a href="https://www.linkedin.com/in/salah-eddine-ait-daoud/">
+            <img src="images/icons/linkedin.png" alt="linkedin" >
+          </a>  
+        </li>
+        <li class="list-inline-item social-buttons">
+          <a href="https://github.com/SalaheddineAD">
+            <img src="images/icons/github.png" alt="github" >
+          </a>
+        </li>
+        <li class="list-inline-item social-buttons">
+          <a href="mailto:salaheddineaitdaoud@gmail.com">
+            <img src="images/icons/email.png" alt="email">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</script>
   <!-- footer -->
   <script id="footerTemp" type="text/x-handlebars-template">
     <div class="scrollerSection">
-      <footer id="footer">
-        <p>Salah 2023</p>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-      </footer>
-    </div>
-  </script>
+      <section id="footer">  
+        <footer class="text-center text-lg-start bg-light text-muted">
+          <!-- Section: Social media -->
+          <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+              <span>Feel free to contact me on :</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+              <div>
+                <ul class="social-btns text-center" >
+                  <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/salah-eddine-ait-daoud/">
+                      <img src="images/icons/linkedin.png" alt="linkedin" >
+                    </a>  
+                  </li>
+                  <li class="list-inline-item social-buttons">
+                    <a href="https://github.com/SalaheddineAD">
+                      <img src="images/icons/github.png" alt="github" >
+                    </a>
+                  </li>
+                  <li class="list-inline-item social-buttons">
+                    <a href="mailto:salaheddineaitdaoud@gmail.com">
+                      <img src="images/icons/email.png" alt="email">
+                      
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Right -->
+          </section>
+          <!-- Section: Social media -->
+
+          <!-- Section: Links  -->
+          <section class="">
+            <div class="container text-center text-md-start mt-5">
+              <!-- Grid row -->
+              <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                  <!-- Content -->
+                  <h6 class="text-uppercase fw-bold mb-4">
+                    <i class="fas fa-gem me-3"></i>Data Alchemist
+                  </h6>
+                  <img src="images\logo\logo_1.png" alt="MyDatalchemistLogo" class="logo-fouter">
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <!-- Links -->
+                  <h6 class="text-uppercase fw-bold mb-4">
+                    Sections
+                  </h6>
+                  <p>
+                    <a href="#aboutme" class="text-reset">About Me</a>
+                  </p>
+                  <p>
+                    <a href="#services" class="text-reset">Services</a>
+                  </p>
+                  <p>
+                    <a href="#work" class="text-reset">Work</a>
+                  </p>
+                  <p>
+                    <a href="#portfolio" class="text-reset">Portfolio</a>
+                  </p>
+                </div>
+                <!-- Grid column -->
+
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                  <!-- Links -->
+                  <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                  <p><i class="fas fa-home me-3"></i> Fairfield, IA, US</p>
+                  <p>
+                    <i class="fas fa-envelope me-3"></i>
+                    salaheddineaitdaoud@gmail.com
+                  </p>
+                  <p><i class="fas fa-phone me-3"></i> (641) 233 9462</p>
+                </div>
+                <!-- Grid column -->
+              </div>
+              <!-- Grid row -->
+            </div>
+          </section>
+          <!-- Section: Links  -->
+
+          <!-- Copyright -->
+          <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2023 Copyright:
+            <a class="text-reset fw-bold" href="https://mydatalchemist.com/">MyDatalchemist.com</a>
+          </div>
+          <!-- Copyright -->
+        </footer>
+      </section>      
+  </div>
+</script>
 
 </body>
 

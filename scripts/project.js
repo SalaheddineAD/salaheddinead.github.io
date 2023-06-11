@@ -38,7 +38,7 @@ const projects = [
   {
     id: 5,
     image: "images/images_for_projects/RevenueForecasting.jpg",
-    title: "Revenue Forecasting",
+    title: "Cashflow Forecasting",
     company: "Jan 2022 - Sep 2022",
     detail: "seats remaining: 2",
     text: "",
