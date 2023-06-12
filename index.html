@@ -4,7 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <title>Data Alchemist</title>
+  <title>
+    Data Alchemist
+  </title>
+  <link rel="icon" type="image/png" href="images/logo/logo_alone_cropped.png"/>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -52,7 +55,7 @@
   <!-- landing -->
   <script id="landingTemp" type="text/x-handlebars-template">
     <div class="scrollerSection">
-      <section class="landing">
+      <section id="home" class="landing">
           <div  id="landing-div" class="bg-image d-flex position-relative">
             <!-- <div  id="landing-div"></div> -->
             <div id="landing-div-title">
@@ -73,7 +76,7 @@
           <div class="row">
             <div class="col-lg-12  text-center"style="width:65%; margin-left:auto;margin-right:auto; margin-top: 15px">
               <h3>About Me</h3>
-              <p>Hello, my name is Salah, and I am a data scientist with 2 years of experience in many industries such as insurance, banking, retail, energy, tourism, transportation, consulting and research. I am passionate about using data-driven insights to solve complex business problems.
+              <p>Hello, my name is Salah, and I am a data scientist with 2 years of experience in many industries such as insurance, banking, retail, energy, tourism, transportation, consulting and research. I hold a Master's degree in Software and Data Engineering, and I am currently pursuing a Master's of Science in Data Science. I am passionate about using data-driven insights to solve complex business problems.
               </p>
               <p> In my previous roles, I have contributed to a variety of projects where I used my expertise in statistics, programming, and machine learning to analyze complex data sets, extract valuable insights, and develop predictive models to drive business decisions. 
                 I have a proven track record of delivering impactful results and pride myself on being a collaborative team player who works effectively with diverse groups of people.
@@ -91,8 +94,8 @@
 
   <!-- services -->
   <script id="servicesTemp" type="text/x-handlebars-template">
-    <div class="scrollerSection center">
-      <div id="services">
+    <div id="services" class="scrollerSection center">
+      <section >
         <div id="services-title" style="width:65%; margin-left:auto;margin-right:auto;">
         <h3>Services</h3>
         <p>With extensive knowledge and experience in machine learning and deep learning algorithms, 
@@ -116,7 +119,7 @@
             </div>
           {{/each}}
         </div>
-      </div>
+      </section>
     </div>
   </script>
 
@@ -124,7 +127,10 @@
   <script id="workTemp" type="text/x-handlebars-template">
     <div class="scrollerSection">
       <section id="work">
+        <div id="services-title" style="width:65%; margin-left:auto;margin-right:auto;">
         <h3>Work</h3>
+        <p>As a data scientist, I translate data into valuable and comprehensible insights. My goal is to improve results, make the right decisions and save costs </p>
+        </div>
         <div id="p-container">
           {{#each projects}}
             <div class="p-card">
@@ -237,7 +243,7 @@
                   <h6 class="text-uppercase fw-bold mb-4">
                     <i class="fas fa-gem me-3"></i>Data Alchemist
                   </h6>
-                  <img src="images\logo\logo_1.png" alt="MyDatalchemistLogo" class="logo-fouter">
+                  <img src="images\logo/logo2.png" alt="MyDatalchemistLogo" class="logo-fouter">
                 </div>
                 <!-- Grid column -->
 
@@ -256,9 +262,9 @@
                   <p>
                     <a href="#work" class="text-reset">Work</a>
                   </p>
-                  <p>
+                  <!-- <p>
                     <a href="#portfolio" class="text-reset">Portfolio</a>
-                  </p>
+                  </p> -->
                 </div>
                 <!-- Grid column -->
 

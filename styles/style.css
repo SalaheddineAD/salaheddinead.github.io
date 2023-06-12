@@ -11,7 +11,7 @@
 
 .scrollerSection {
   /* height: 100vh; */
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 
 #landing {
@@ -24,7 +24,7 @@
 }
 
 #landing-div {
-  background-image: url('../images/best_ever.jpg');
+  background-image: url('../images/best_ever2.jpg');
   /* height: 38vh; */
   /* min-height: 400px; */
   width: 100%;
@@ -57,6 +57,7 @@ hr {
   min-height: 600px; 
   padding-top: 10vh; */
   background-color: #f1f5f9;
+  /* height: max( max-content, 100vh); */
   height: 100vh;
   display: grid;
   place-items: center;
@@ -136,4 +137,8 @@ hr {
   .nav-bar {
     font-size: x-small;
   }
+}
+.image-title-page{
+
+
 }

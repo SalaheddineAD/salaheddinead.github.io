@@ -12,13 +12,13 @@ const pdetails = [
   },
   {
     id: 2,
-    title: "Investment Intentions Forecasting",
-    role: "Data Scientist Associate at AkumenIA",
+    title: "Fraudulent Automobile Claims Detection",
+    role: "Data Scientist at Atlanta Insurance",
     Description:[
       "As the project lead for a team of two Data Scientists, I worked on a comprehensive fraud detection system for Atlanta Insurance's automobile claims. The objective was to develop a robust system that could effectively detect fraudulent claims using machine learning techniques.",
       "Our team utilized a meticulous methodology that began with data preparation and feature engineering, which involved data cleaning, duplicate detection, correction of incoherent values, and feature engineering in the insurance claims dataset.",
       "We also addressed the issue of unbalanced data by using a semi-supervised methodology to ensure the models were trained effectively on both fraudulent and non-fraudulent cases. Our team created supervised machine learning models, including AdaBoost, XGBoost, and Support Vector Machine (SVM), to detect fraudulent claims while minimizing false positive cases. Additionally, we utilized unsupervised learning techniques such as Isolation Forest and Density-Based Spatial Clustering of Applications with Noise (DBSCAN) to detect potential fraud as outliers in the dataset.",
-      "To implement the project, we used Python, scikit-learn, CUDA, PySpark, Power BI, and XGBoost technologies. Our team's approach successfully developed a comprehensive fraud detection system that effectively identified fraudulent cases while minimizing false positives. This allowed Atlannta Insurance to streamline their claims processing and mitigate the financial impact of fraudulent claims.",
+      "To implement the project, we used Python, scikit-learn, CUDA, PySpark, Power BI, and XGBoost technologies. Our team's approach successfully developed a comprehensive fraud detection system that effectively identified fraudulent cases while minimizing false positives. This allowed Atlanta Insurance to streamline its claims processing and mitigate the financial impact of fraudulent claims.",
       "As the project lead, I was responsible for ensuring that the project adhered to best practices, timelines, and quality standards. My contribution to the project included driving the team's methodology, supervising feature engineering and model development, as well as ensuring that the project was completed within schedule and budget. Working as a team of two data scientists, we were able to deliver a project that met the company’s needs and exceeded its expectations."
     ]
   },
@@ -57,18 +57,20 @@ const pdetails = [
     title: "Energy Production Forecasting",
     role: "Data Scientist Associate at AkumenIA",
     Description:[
-      
+      "As a Data Scientist Associate at AkumenIA, I contributed to a project to create a highly accurate forecasting model for energy production for a large electric utility.  We had hourly data of the electricity production for each wind turbine for each site and we were dealing with many gigabytes of data",
+      " We dealied with missing data, by implementing robust data preprocessing techniques to handle these issues effectively. We automated an ETL pipeline to clean data from the source and store them in a data lake using Azure DataFactory. We built Deep learning models such as Long Short-Term Memory (LSTM), Temporal Fusion Transformer (TFT), and Gated Recurrent Unit (GRU) using Tensorflow and PyTorch. We checked the values that didn't make sense and which the models couldn't predict the result. We collaborated with the client during each sprint to find what features could be added and how we can further improve the models.",
+      "By proactively addressing these challenges and leveraging data preprocessing techniques, outlier detection methods, and model optimization strategies, we ensured that we achieved the best possible results for our client. At the end of the project, we were able to meet the client's expectations. And we started the operations part."
     ]
   },
   {
     id: 7,
-    title: "Fraudulent Automobiile Claims Detection",
-    role: "Data Scientist at Atlanta Insurance",
+    title: "Investment Intentions Forecasting",
+    role: "Data Scientist Associate at AkumenIA",
     Description:[
       "As the project lead for a team of two Data Scientists, I worked on a comprehensive fraud detection system for Atlanta Insurance's automobile claims. The objective was to develop a robust system that could effectively detect fraudulent claims using machine learning techniques.",
       "Our team utilized a meticulous methodology that began with data preparation and feature engineering, which involved data cleaning, duplicate detection, correction of incoherent values, and feature engineering in the insurance claims dataset.",
       "We also addressed the issue of unbalanced data by using a semi-supervised methodology to ensure the models were trained effectively on both fraudulent and non-fraudulent cases. Our team created supervised machine learning models, including AdaBoost, XGBoost, and Support Vector Machine (SVM), to detect fraudulent claims while minimizing false positive cases. Additionally, we utilized unsupervised learning techniques such as Isolation Forest and Density-Based Spatial Clustering of Applications with Noise (DBSCAN) to detect potential fraud as outliers in the dataset.",
-      "To implement the project, we used Python, scikit-learn, CUDA, PySpark, Power BI, and XGBoost technologies. Our team's approach successfully developed a comprehensive fraud detection system that effectively identified fraudulent cases while minimizing false positives. This allowed Atlanta Insurance to streamline its claims processing and mitigate the financial impact of fraudulent claims.",
+      "To implement the project, we used Python, scikit-learn, CUDA, PySpark, Power BI, and XGBoost technologies. Our team's approach successfully developed a comprehensive fraud detection system that effectively identified fraudulent cases while minimizing false positives. This allowed Atlannta Insurance to streamline their claims processing and mitigate the financial impact of fraudulent claims.",
       "As the project lead, I was responsible for ensuring that the project adhered to best practices, timelines, and quality standards. My contribution to the project included driving the team's methodology, supervising feature engineering and model development, as well as ensuring that the project was completed within schedule and budget. Working as a team of two data scientists, we were able to deliver a project that met the company’s needs and exceeded its expectations."
     ]
   },

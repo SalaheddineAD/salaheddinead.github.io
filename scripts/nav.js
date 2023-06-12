@@ -1,7 +1,7 @@
 const navs = [
   {
     "name": "Home",
-    "href": "#"
+    "href": "#home"
   },
   {
     "name": "About me",
@@ -15,10 +15,10 @@ const navs = [
     "name": "Work",
     "href": "#work"
   },
-  {
-    "name": "Porfolio",
-    "href": "#porfolio"
-  },
+  // {
+  //   "name": "Porfolio",
+  //   "href": "#porfolio"
+  // },
   {
     "name": "Contact",
     "href": "#footer"
