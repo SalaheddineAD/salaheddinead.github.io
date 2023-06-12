@@ -10,12 +10,12 @@ const projects = [
   },
   {
     id: 2,
-    image: "images/images_for_projects/InvestmentForecasting.jpg",
-    title: "Investment Intentions Forecasting",
-    company: "Jan 2022 - Sep 2022",
+    image: "images/images_for_projects/frauddetection.jpg",
+    title: "Fraudulent Automobile Claims Detection",
+    company: "jun 2021 - Sep 2021",
     detail: "seats remaining: 2",
     text: "",
-    pageUrl: "InvestmentIntentionsForecasting.html"
+    pageUrl: "FraudDetection.html"
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const projects = [
   },
   {
     id: 4,
-    image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/new-york-city.png",
+    image: "images/images_for_projects/urban_mobility_analysis.jpg",
     title: "urban Mobility Analysis",
     company: "Jan 2022 - Sep 2022",
     detail: "seats remaining: 2",
@@ -37,8 +37,8 @@ const projects = [
   },
   {
     id: 5,
-    image: "images/images_for_projects/RevenueForecasting.jpg",
-    title: "Revenue Forecasting",
+    image: "images/images_for_projects/RevenueForecasting2.jpg",
+    title: "Cashflow Forecasting",
     company: "Jan 2022 - Sep 2022",
     detail: "seats remaining: 2",
     text: "",
@@ -46,7 +46,7 @@ const projects = [
   },
   {
     id: 6,
-    image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/new-york-city.png",
+    image: "images/images_for_projects/EnergyForecasting2.jpg",
     title: "Energy Production Forecasting",
     company: "Jan 2022 - Sep 2022",
     detail: "seats remaining: 2",
@@ -55,16 +55,16 @@ const projects = [
   },
   {
     id: 7,
-    image: "images/images_for_projects/frauddetection.jpg",
-    title: "Fraudulent Automobile Claims Detection",
-    company: "jun 2021 - Sep 2021",
+    image: "images/images_for_projects/InvestmentForecasting.jpg",
+    title: "Investment Intentions Forecasting",
+    company: "Jan 2022 - Sep 2022",
     detail: "seats remaining: 2",
     text: "",
-    pageUrl: "FraudDetection.html"
+    pageUrl: "InvestmentIntentionsForecasting.html"
   },
   {
     id: 8,
-    image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/new-york-city.png",
+    image: "images/images_for_projects/studentGradeForecasting.jpg",
     title: "Student Academic Success Forecasting",//might need to change this one
     company: "Jun 2020 - Aug 2020",
     detail: "seats remaining: 2",
