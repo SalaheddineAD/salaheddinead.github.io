@@ -49,7 +49,11 @@ const pdetails = [
     title: "Cashflow Forecasting",
     role: "Data Scientist Associate at AkumenIA",
     Description:[
-      
+      "As a Data Scientist Associate at AkumenIA, I contributed significantly to accurately predicting cash flows for an electricity and water utility company. This project involved analyzing specific types of data relevant to the utility industry, such as electricity and water consumption meters, customer billing records, tariff structures, operational costs, and maintenance expenses.",
+"Handling the high volumes of time-series data, including hourly or daily consumption data, billing records, and external factors like weather patterns and market dynamics, presented unique challenges. Leveraging advanced analytics techniques, we utilized time series analysis, regression models, and forecasting algorithms to capture relationships and patterns within the data.",
+"Collaboration with the utility company was crucial throughout the project. Regular communication and close collaboration with their domain experts ensured that the cash flow predictions aligned with their specific business needs.",
+"By proactively addressing data challenges, employing preprocessing techniques, and leveraging advanced machine learning algorithms, we achieved highly accurate cash flow predictions. These forecasts empowered the utility company to make informed decisions regarding financial planning, investment strategies, and operational management.",
+"As the project concluded, we successfully transitioned to the operations phase, deploying the cash flow prediction models into the company's existing systems. This enabled real-time utilization of accurate forecasts, supporting cash flow management, budgeting, and overall financial decision-making."
     ]
   },
   {
@@ -67,12 +71,13 @@ const pdetails = [
     title: "Investment Intentions Forecasting",
     role: "Data Scientist Associate at AkumenIA",
     Description:[
-      "As the project lead for a team of two Data Scientists, I worked on a comprehensive fraud detection system for Atlanta Insurance's automobile claims. The objective was to develop a robust system that could effectively detect fraudulent claims using machine learning techniques.",
-      "Our team utilized a meticulous methodology that began with data preparation and feature engineering, which involved data cleaning, duplicate detection, correction of incoherent values, and feature engineering in the insurance claims dataset.",
-      "We also addressed the issue of unbalanced data by using a semi-supervised methodology to ensure the models were trained effectively on both fraudulent and non-fraudulent cases. Our team created supervised machine learning models, including AdaBoost, XGBoost, and Support Vector Machine (SVM), to detect fraudulent claims while minimizing false positive cases. Additionally, we utilized unsupervised learning techniques such as Isolation Forest and Density-Based Spatial Clustering of Applications with Noise (DBSCAN) to detect potential fraud as outliers in the dataset.",
-      "To implement the project, we used Python, scikit-learn, CUDA, PySpark, Power BI, and XGBoost technologies. Our team's approach successfully developed a comprehensive fraud detection system that effectively identified fraudulent cases while minimizing false positives. This allowed Atlannta Insurance to streamline their claims processing and mitigate the financial impact of fraudulent claims.",
-      "As the project lead, I was responsible for ensuring that the project adhered to best practices, timelines, and quality standards. My contribution to the project included driving the team's methodology, supervising feature engineering and model development, as well as ensuring that the project was completed within schedule and budget. Working as a team of two data scientists, we were able to deliver a project that met the company’s needs and exceeded its expectations."
-    ]
+      "As a Data Scientist Associate at AkumenIA, I played a crucial role in a project focused on accurately forecasting investment intentions. This involved predicting the likelihood of individuals or organizations investing in various financial instruments.",
+"To gather the necessary data, I utilized web scraping techniques with Selenium, extracting information from different sources such as financial websites, social media platforms, and market news. Handling vast amounts of data, often spanning gigabytes, required robust data handling techniques to ensure accuracy.",
+"We automated the data cleaning and transformation process using Azure DataFactory, ensuring the data was preprocessed effectively. Advanced deep learning techniques, including LSTM, TFT, and GRU models implemented with TensorFlow and PyTorch, were utilized to capture temporal patterns and dependencies within the investment data.",
+"Collaboration with the client was crucial throughout the project. We engaged in regular communication and collaboration sessions to incorporate their domain expertise and identify additional features to enhance the models.",
+"By proactively addressing challenges and leveraging data preprocessing techniques, outlier detection methods, and model optimization strategies, we achieved accurate investment intention forecasts. We successfully met the client's expectations, enabling them to make informed decisions based on our reliable predictions.",
+"As the project concluded, we transitioned to the operations phase, deploying the forecasting models into a production environment. This empowered the client to utilize the accurate predictions for effective investment decision-making.",
+"In summary, my role as a Data Scientist Associate at AkumenIA involved web scraping using Selenium, handling diverse data sources, and applying advanced deep learning techniques for forecasting investment intentions. Through collaboration, innovation, and robust data handling, we delivered a reliable forecasting solution that met the client's needs."    ]
   },
   {
     id: 8,
@@ -88,9 +93,16 @@ const pdetails = [
   {
     id: 9,
     title: "Drowsiness Detection",
-    role: "Personal Project",
+    role: "Freelance project",
     Description:[
-      
+      "During my freelancing experience, I undertook an exciting project focused on drowsiness detection. The objective was to develop a system that could detect signs of drowsiness in individuals, particularly drivers, to prevent accidents and ensure road safety.",
+      "To accomplish this, I gathered a diverse dataset consisting of video recordings captured from in-car cameras and various physiological signals such as eye movement, head pose, and blink frequency. These signals were crucial in identifying patterns associated with drowsiness.",
+      "In the project, I employed a combination of computer vision and machine learning techniques. Initially, I used OpenCV to extract facial landmarks and track facial features in real-time from the video data. This allowed me to monitor eye closure, yawning, and other indicators of drowsiness.",
+      "Next, I leveraged machine learning algorithms to classify the extracted features and determine the likelihood of drowsiness. Specifically, I experimented with various models such as Convolutional Neural Networks (CNNs) and Recurrent Neural Networks (RNNs) to capture both spatial and temporal information from the data.",
+      "The methodology involved a two-step process: feature extraction and classification. In the feature extraction step, I used pre-trained models such as VGGNet or ResNet to extract high-level features from the facial images. These features were then fed into the classification models, which were trained on labeled data to differentiate between alert and drowsy states.",
+      "To evaluate the system's performance, I employed techniques such as k-fold cross-validation and calculated metrics like accuracy, precision, recall, and F1 score. For instance, the accuracy of the drowsiness detection system reached an impressive 92%, indicating its ability to correctly identify drowsy states with a high degree of accuracy.",
+      "Throughout the project, I followed an iterative approach, constantly refining the models and incorporating feedback from clients or domain experts. This ensured that the system could generalize well to different individuals and lighting conditions, enhancing its real-world applicability.",
+      "In summary, my freelancing project on drowsiness detection involved working with a diverse dataset comprising video recordings and physiological signals. By combining computer vision techniques with machine learning models, I developed a system capable of detecting signs of drowsiness. The methodology included feature extraction and classification using models like CNNs and RNNs. With an accuracy of 92%, the system demonstrated its high level of accuracy in identifying drowsy states. Through an iterative process, I refined the models to achieve accurate and practical drowsiness detection."
     ]
   }
 ]
