@@ -1,21 +1,21 @@
 const projects = [
   {
     id: 1,
-    image: "images/images_for_projects/BankCustomerSegmentation.jpg",
-    title: "Bank Customer Segmentation",
-    company: "Jan 2022 - Sep 2022",
-    detail: "seats remaining: 2",
-    text: "",
-    pageUrl: "BankCustomerSegmentation.html"
-  },
-  {
-    id: 2,
     image: "images/images_for_projects/frauddetection.jpg",
     title: "Fraudulent Automobile Claims Detection",
     company: "jun 2021 - Sep 2021",
     detail: "seats remaining: 2",
     text: "",
     pageUrl: "FraudDetection.html"
+  },
+  {
+    id: 2,
+    image: "images/images_for_projects/bankCustomerSegmentation.png",
+    title: "Bank Customer Segmentation",
+    company: "Jan 2022 - Sep 2022",
+    detail: "seats remaining: 2",
+    text: "",
+    pageUrl: "BankCustomerSegmentation.html"
   },
   {
     id: 3,
