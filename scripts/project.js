@@ -1,7 +1,7 @@
 const projects = [
   {
     id: 1,
-    image: "images/images_for_projects/BankCustomerSegmentation.jpg",
+    image: "images/images_for_projects/BankCustomerSegmentation.png",
     title: "Bank Customer Segmentation",
     company: "Jan 2022 - Sep 2022",
     detail: "seats remaining: 2",
