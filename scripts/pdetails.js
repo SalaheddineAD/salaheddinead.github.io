@@ -1,17 +1,6 @@
 const pdetails = [
   {
     id: 1,
-    title: "ML-driven Bank's Customer Segmentation",
-    role: "Data Scientist Associate at AkumenIA",
-    Description:[
-      "As a Data Scientist Associate at AkumenIA, I worked on an AI-driven customer segmentation project to enhance the bank's customer segmentation strategy and drive business growth. The project involved several steps, starting with data quality reporting, where we prepared a data dictionary and analyzed the bank's customer data to identify and report null values, incoherent values, outliers, invalid data, and duplicates.",
-      "Next, we created scoring variables to assess the quality of customer segmentation based on the bank's objectives and goals. We then developed over 100 Key Performance Indicators (KPIs) for use in machine learning models, cleaned and structured the data, and employed machine learning algorithms such as hierarchical clustering and K-means for customer segmentation.",
-      "By iteratively refining the models and selecting the best-performing model based on scoring variables, we were able to achieve over 96% accuracy in segment assignment without using the most important KPI, and 99.99% accuracy when including the key KPI. The project also involved sharing insights on the characteristics of each customer segment and providing detailed customer profiling to inform the bank's marketing and sales strategies.",
-      "Ultimately, our team's approach significantly improved the bank's customer segmentation strategy, empowering the bank to make more informed decisions and tailor its marketing and sales strategies to each segment, resulting in business growth. The successful development of a highly accurate assignment engine also enabled the bank to accurately determine the segment to which a client belongs, further improving the overall customer experience"
-    ]
-  },
-  {
-    id: 2,
     title: "Fraudulent Automobile Claims Detection",
     role: "Data Scientist at Atlanta Insurance",
     Description:[
@@ -20,6 +9,17 @@ const pdetails = [
       "We also addressed the issue of unbalanced data by using a semi-supervised methodology to ensure the models were trained effectively on both fraudulent and non-fraudulent cases. Our team created supervised machine learning models, including AdaBoost, XGBoost, and Support Vector Machine (SVM), to detect fraudulent claims while minimizing false positive cases. Additionally, we utilized unsupervised learning techniques such as Isolation Forest and Density-Based Spatial Clustering of Applications with Noise (DBSCAN) to detect potential fraud as outliers in the dataset.",
       "To implement the project, we used Python, scikit-learn, CUDA, PySpark, Power BI, and XGBoost technologies. Our team's approach successfully developed a comprehensive fraud detection system that effectively identified fraudulent cases while minimizing false positives. This allowed Atlanta Insurance to streamline its claims processing and mitigate the financial impact of fraudulent claims.",
       "As the project lead, I was responsible for ensuring that the project adhered to best practices, timelines, and quality standards. My contribution to the project included driving the team's methodology, supervising feature engineering and model development, as well as ensuring that the project was completed within schedule and budget. Working as a team of two data scientists, we were able to deliver a project that met the company’s needs and exceeded its expectations."
+    ]
+  },
+  {
+    id: 2,
+    title: "ML-driven Bank's Customer Segmentation",
+    role: "Data Scientist Associate at AkumenIA",
+    Description:[
+      "As a Data Scientist Associate at AkumenIA, I worked on an AI-driven customer segmentation project to enhance the bank's customer segmentation strategy and drive business growth. The project involved several steps, starting with data quality reporting, where we prepared a data dictionary and analyzed the bank's customer data to identify and report null values, incoherent values, outliers, invalid data, and duplicates.",
+      "Next, we created scoring variables to assess the quality of customer segmentation based on the bank's objectives and goals. We then developed over 100 Key Performance Indicators (KPIs) for use in machine learning models, cleaned and structured the data, and employed machine learning algorithms such as hierarchical clustering and K-means for customer segmentation.",
+      "By iteratively refining the models and selecting the best-performing model based on scoring variables, we were able to achieve over 96% accuracy in segment assignment without using the most important KPI, and 99.99% accuracy when including the key KPI. The project also involved sharing insights on the characteristics of each customer segment and providing detailed customer profiling to inform the bank's marketing and sales strategies.",
+      "Ultimately, our team's approach significantly improved the bank's customer segmentation strategy, empowering the bank to make more informed decisions and tailor its marketing and sales strategies to each segment, resulting in business growth. The successful development of a highly accurate assignment engine also enabled the bank to accurately determine the segment to which a client belongs, further improving the overall customer experience"
     ]
   },
   {
