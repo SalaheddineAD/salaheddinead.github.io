@@ -16,7 +16,7 @@
 
 #landing {
   border: 1px solid black;
-  height: 200px;
+  height: 300px;
 }
 
 .box {
@@ -35,7 +35,7 @@
 
 #landing-div-title {
   position: absolute;
-  bottom: 34%;
+  bottom: 45%;
   left: 4%;
   padding: 20px;
   color: rgb(0, 0, 0);
@@ -83,15 +83,6 @@ hr {
 }
 
 
-/* #services{
-  height: 90vh; 
-  width: 100vw; 
-  width: 100%;  
-  padding-top: 7vh; 
-  padding-bottom: 5%;  
-} */
-
-
 .smooth-transition {
   transition: all 0.5s ease;
 }
@@ -105,14 +96,6 @@ hr {
   color: white;
 
 }
-
-/* .nav-bar {
-  min-height: 50px;
-  display: flex;
-  align-items: center;
-  color: #000000;
-} */
-
 
 
 @media (max-width: 900px) {
@@ -130,6 +113,22 @@ hr {
 
   .scroller {
     scroll-snap-type: none;
+  }
+  .nav-bar {
+    /* height: 8%; */
+    /* change the height as desired */
+    /* change the height as desired */
+    /* min-height: 50px; */
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: #ffffff;
+    box-shadow: 0, 3px, 10px, rgba(0, 0, 0, 0.15);
+    font-size: 20px;
+  }
+  .nav-element {
+    color: white;
+  
   }
 }
 
