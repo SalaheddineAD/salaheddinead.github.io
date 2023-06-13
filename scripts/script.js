@@ -38,15 +38,15 @@ $(() => {
 
 
 function changeNavOnScroll() {
-  // const nav = document.querySelector("#nav")
   const nav = $('#nav');
   const navElement = document.querySelectorAll(".nav-element")
   const landingSection = document.querySelector('.landing');
 
-  // window.addEventListener("scroll", () => {
   window.onwheel = (e) => {
-    if (landingSection.getBoundingClientRect().top == 0) {
+    if (landingSection.getBoundingClientRect().top == 0 || document.body.scrollTop > window.innerHeight ) {
       nav.removeClass('scrolled-navbar')
+      console.log( document.body.scrollTop)
+      console.log("hello")
       navElement.forEach(element => {
         element.classList.remove('scrolled-nav-element')
       });
