@@ -12,8 +12,8 @@ const navs = [
     "href": "#services"
   },
   {
-    "name": "Work",
-    "href": "#work"
+    "name": "Experience",
+    "href": "#experience"
   },
   // {
   //   "name": "Porfolio",
