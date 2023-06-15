@@ -91,17 +91,17 @@ hr {
   margin-bottom: 50px;
 }
 
-.work-div h3 {
+.experience-div h3 {
   text-align: center;
   padding-bottom: 30px;
 }
 
-.work-div p {
+.experience-div p {
   text-align: center;
   padding-bottom: 40px;
 }
 
-.work-div {
+.experience-div {
   text-align: center;
   /* margin: 0 auto; */
   padding-top: 50px;
@@ -189,17 +189,17 @@ hr {
   .services-div h3{
     padding-bottom: 15px;
   }
-  .work-div h3 {
+  .experience-div h3 {
     text-align: center;
     padding-bottom: 25px;
   }
   
-  .work-div p {
+  .experience-div p {
     text-align: center;
     padding-bottom: 15px;
   }
   
-  .work-div {
+  .experience-div {
     text-align: center;
     /* margin: 0 auto; */
     padding-top: 50px;
