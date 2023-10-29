@@ -83,7 +83,7 @@ function closePopupHandler(e) {
 function submitContactForm(e) {
   console.log(e)
   // Define the URL of the API endpoint
-  const apiUrl = 'https://example.com/api/endpoint'; // Replace with your API endpoint URL
+  const apiUrl = 'https://fjyd6irm61.execute-api.us-east-1.amazonaws.com/v1'; // Replace with your API endpoint URL
 
   const subjectField = document.getElementById('subject').value;
   const nameField = document.getElementById('name').value;
