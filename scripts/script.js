@@ -1,5 +1,5 @@
 $(() => {
-
+  console.log("js working")
   // load nav
   const navTemp = Handlebars.compile($('#navTemp').html());
   $('#main').append(navTemp({ 'nav': navs }));
@@ -34,6 +34,9 @@ $(() => {
   changeNavOnScroll();
 
   $('.popup-btn').click(openPopupHandler);
+
+  $('#submit-button').click(submitContactForm);
+
 });
 
 
@@ -75,4 +78,45 @@ function closePopupHandler(e) {
   $('.popup-wrap').fadeOut(500);
   $('.popup-box').removeClass('transform-in').addClass('transform-out');
   e.preventDefault();
+}
+
+function submitContactForm(e) {
+  console.log(e)
+  // Define the URL of the API endpoint
+  const apiUrl = 'https://example.com/api/endpoint'; // Replace with your API endpoint URL
+
+  const subjectField = document.getElementById('subject').value;
+  const nameField = document.getElementById('name').value;
+  const emailField = document.getElementById('email').value;
+  const messageField = document.getElementById('message').value;
+
+  // Define the data you want to send in the POST request (as a JavaScript object)
+  const postData = {
+      subjectField : subjectField,
+      nameField : nameField,
+      emailField : emailField,
+      messageField : messageField
+  };
+
+  // Configure the fetch request
+  fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json', // Adjust this content type as needed
+      },
+      body: JSON.stringify(postData), // Convert the data to JSON format
+  })
+  .then(response => {
+      if (response.ok) {
+          return response.json(); // If the response is successful, parse the JSON response
+      } else {
+          throw new Error('POST request failed');
+      }
+  })
+  .then(data => {
+      console.log('Response from API:', data); // Handle the API response data here
+  })
+  .catch(error => {
+      console.error('Error:', error); // Handle errors here
+  });
 }
