@@ -1,5 +1,5 @@
 $(() => {
-
+  console.log("js working")
   // load nav
   const navTemp = Handlebars.compile($('#navTemp').html());
   $('#main').append(navTemp({ 'nav': navs }));
