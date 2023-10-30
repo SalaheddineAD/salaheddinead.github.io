@@ -80,10 +80,11 @@ function closePopupHandler(e) {
   e.preventDefault();
 }
 
-function submitContactForm(e) {
+async function submitContactForm(e) {
+  e.preventDefault()
   console.log(e)
   // Define the URL of the API endpoint
-  const apiUrl = 'https://fjyd6irm61.execute-api.us-east-1.amazonaws.com/v1'; // Replace with your API endpoint URL
+  const apiUrl = 'https://fjyd6irm61.execute-api.us-east-1.amazonaws.com/v1/awscourse'; 
 
   const subjectField = document.getElementById('subject').value;
   const nameField = document.getElementById('name').value;
@@ -97,16 +98,19 @@ function submitContactForm(e) {
       emailField : emailField,
       messageField : messageField
   };
-
+  
+  console.log(postData)
   // Configure the fetch request
-  fetch(apiUrl, {
+  await fetch(apiUrl, {
       method: 'POST',
+      mode: "no-cors", // no-cors, *cors, same-origin
       headers: {
           'Content-Type': 'application/json', // Adjust this content type as needed
       },
       body: JSON.stringify(postData), // Convert the data to JSON format
   })
   .then(response => {
+      console.log(response)
       if (response.ok) {
           return response.json(); // If the response is successful, parse the JSON response
       } else {
