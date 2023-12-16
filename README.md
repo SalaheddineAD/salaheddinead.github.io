@@ -1,5 +1,13 @@
-<h1 align="center">🚀 Hi, I'm Salah</h1>
-<h3 align="center">A Full-Stack Data Scientist driving multimillion-dollar impacts</h3>
+<img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=salaheddinead/salaheddinead" alt="salaheddinead">    
+
+<h1 align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.herokuapp.com/?lines=This+is+Salah+;Nice+to+meet+you+%F0%9F%91%8B&center=true&size=30">
+  </a>
+</h1>
+<img align ="center", src = "github header.png" alt = "githubHeader">
+
+<h3 align="center">Full-Stack Data Scientist driving multimillion-dollar impacts</h3>
 
 <p align="center">
   <a href="https://linkedin.com/in/salah-eddine-ait-daoud" target="blank">
@@ -9,13 +17,36 @@
     <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="salaheddineaitdaoud" height="30" width="40" />
   </a>
 </p>
+<h2>Projects</h2>
+
+Here's a selection of projects that I've contributed to:
+### User Adoption Analysis - Python, Machine Learning, Data Analytics -
+Managed a user adoption analysis project, determining what drives user engagement. 
+[View Project](https://github.com/SalaheddineAD/user-adoption-analysis)
+
+### Microservices-Based-Data-Participation-and-Analysis - Java, Microservices, Spring Boot, Docker -
+A microservices-based platform for dynamic, real-time data participation and analysis.
+[View Project](https://github.com/SalaheddineAD/microservices-based-data-participation-and-analysis)
+
+### NLP-Based Chatbot - NLP, Machine Learning, Python - 
+Developed a chatbot using natural language processing techniques to interact with users and provide instant responses.
+[View Project](https://github.com/SalaheddineAD/chatbot-nlp)
+
+### Energy Consumption Forecasting - Python, Tensorflow, LSTM, GRU -
+An advanced forecasting project that employs LSTM and GRU models to predict data consumption patterns.
+[View Project](https://github.com/SalaheddineAD/energy-consumption-forecasting)
+
+### LinkedIn Job Analysis Pipeline - Python, Kafka, Hadoop, Cassandra, PySprak, EC2 -
+A data pipeline analyzing LinkedIn job postings using Apache Kafka, Spark, and other big data technologies, deployed on AWS.
+[View Project](https://github.com/SalaheddineAD/job-analytics)
+
 
 - 🔭 I’m currently working on **building powerful Large Language Models (LLMs)**
 - 🌱 I’m learning **MLOps and AWS SageMaker**
 - 💬 Ask me about **Machine Learning, Data Science, and Data Engineering**
 - 📫 Reach me at: **salaheddineaitdaoud@gmail.com**
 - 🌐 Explore my portfolio: [mydatalchemist.com](https://mydatalchemist.com/)
-- 📄 View my resume: [Resume]([Salah-Daoud-Resume.pdf](https://github.com/SalaheddineAD/SalaheddineAD/files/13694139/Salah-Daoud-Resume.pdf))
+- 📄 View my resume: [Salah-Daoud-Resume.pdf](https://www.linkedin.com/in/salah-eddine-ait-daoud/overlay/1635553960465/single-media-viewer/?profileId=ACoAADOIW60B2bG4Ot0zUop5kybLJzElv2KVi0o)
 
 
 <h3 align="left">Languages and Tools:</h3>
