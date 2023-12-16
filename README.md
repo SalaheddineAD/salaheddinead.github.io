@@ -1,22 +1,29 @@
-<h1 align="center">Hi 👋, I'm Salah</h1>
-<h3 align="center">A Full-Stack Data Scientist who helped companies make millions of $</h3>
+<h1 align="center">🚀 Hi, I'm Salah</h1>
+<h3 align="center">A Full-Stack Data Scientist driving multimillion-dollar impacts</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=salaheddinead&label=Profile%20views&color=0e75b6&style=flat" alt="salaheddinead" /> </p>
+<p align="center">
+  <a href="https://linkedin.com/in/salah-eddine-ait-daoud" target="blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="salah-eddine-ait-daoud" height="30" width="40" />
+  </a>
+  <a href="https://www.leetcode.com/salaheddineaitdaoud" target="blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="salaheddineaitdaoud" height="30" width="40" />
+  </a>
+</p>
 
-- 🔭 I’m currently working on **Building an LLM based chatbot for my website**
+- 🔭 I’m currently working on **building powerful Large Language Models (LLMs)**
+- 🌱 I’m learning **MLOps and AWS SageMaker**
+- 💬 Ask me about **Machine Learning, Data Science, and Data Engineering**
+- 📫 Reach me at: **salaheddineaitdaoud@gmail.com**
+- 🌐 Explore my portfolio: [mydatalchemist.com](https://mydatalchemist.com/)
+- 📄 View my resume: [Resume](https://your-resume-link-here)
 
-- 🌱 I’m currently learning **MLOps, SageMaker and LLMs**
-
-- 💬 Ask me about **Machine Learning, Data Science and data engineering**
-
-- 📫 Reach out to me on: **salaheddineaitdaoud@gmail.com**
-
-- 📄 Explore my work [mydatalchemist.com](mydatalchemist.com)
-
-<h3 align="left">Connect with me:</h3>
+<h3 align="left">Languages and Tools:</h3>
 <p align="left">
-<a href="https://linkedin.com/in/http://www.linkedin.com/in/salah-eddine-ait-daoud" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="http://www.linkedin.com/in/salah-eddine-ait-daoud" height="30" width="40" /></a>
-<a href="https://www.leetcode.com/salaheddineaitdaoud" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="salaheddineaitdaoud" height="30" width="40" /></a>
+  <!-- Icons for languages and tools -->
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=salaheddinead&show_icons=true&locale=en&layout=compact" alt="salaheddinead" />
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
