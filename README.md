@@ -18,24 +18,25 @@
     <a href="mailto:salaheddineaitdaoud@example.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" height=23></a>
     <a href="https://mydatalchemist.com"><img src="https://img.shields.io/badge/Portfolio-0A0A0A?style=for-the-badge&logo=About.me&logoColor=white" height=23></a>
     <a href="https://leetcode.com/salaheddineaitdaoud"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=LeetCode&logoColor=black" height=23></a>
-</p>
   </p>
+  <a href = "https://mydatalchemist.com">
+    <img src = ![portfolio_website_screenshot](https://github.com/SalaheddineAD/SalaheddineAD/assets/93080778/2eb10ec2-54b8-44f3-8959-36b8839d4432) alt = "portfolio website screenshot">
+  </a>
 </div>
-
 <h2>Projects</h2>
 
 Here's a selection of recent open-source projects I've contributed to:
 
-- <b>Managed a user adoption analysis project, leveragingdetermining what drives user engagement. </b>
+- <b>Managed a user adoption analysis project, determining what drives user engagement. </b>
 [View Project](https://github.com/SalaheddineAD/user-adoption-analysis)
 
 - <b>A microservices-based platform for dynamic, real-time data participation and analysis.</b>
 [View Project](https://github.com/SalaheddineAD/microservices-based-data-participation-and-analysis)
 
-- <b>Developed a chatbot using natural language processing techniques to interact with users and provide instant responses.</b>
+- <b>Developed an NLP-based chatbot to interact with users and provide instant responses.</b>
 [View Project](https://github.com/SalaheddineAD/chatbot-nlp)
 
-- <b>Created An advanced forecasting project that employs LSTM and GRU models to predict data consumption patterns.</b>
+- <b>Created A data consumption forecasting project using LSTM and GRU.</b>
 [View Project](https://github.com/SalaheddineAD/energy-consumption-forecasting)
 
 - <b>A data pipeline analyzing LinkedIn job postings using Apache Kafka, Spark, deployed on AWS.</b>
