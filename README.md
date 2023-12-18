@@ -20,7 +20,8 @@
     <a href="https://leetcode.com/salaheddineaitdaoud"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=LeetCode&logoColor=black" height=23></a>
   </p>
   <a href = "https://mydatalchemist.com">
-    <img src = ![portfolio_website_screenshot](https://github.com/SalaheddineAD/SalaheddineAD/assets/93080778/2eb10ec2-54b8-44f3-8959-36b8839d4432) alt = "portfolio website screenshot">
+    <p><b>Click here to explore my professional work</b></p>
+    <img src = "portfolio_website_picture.png" alt = "portfolio website screenshot" width = "60%">
   </a>
 </div>
 <h2>Projects</h2>
