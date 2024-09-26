@@ -11,6 +11,16 @@ const pdetails = [
   },
   {
     id: 2,
+    title: "Fraudulent Automobile Claims Detection",
+    role: "Data Scientist",
+    Description:[
+      "As the project lead, I orchestrated the development of a robust fraud detection system for Atlanta Insurance's auto claims, overseeing a team of two Data Scientists. My individual contributions encompassed meticulous data preparation, feature engineering, and strategic model implementation to effectively identify fraudulent claims."
+      "Leveraging Python, scikit-learn, CUDA, PySpark, Power BI, and XGBoost, I crafted a comprehensive solution. Our system, incorporating supervised machine learning models (AdaBoost, XGBoost, SVM) and unsupervised techniques (Isolation Forest, DBSCAN), not only met but exceeded expectations. Deploying the model using Azure Web Service, we achieved a 30% reduction in fraud-related costs, significantly enhancing Atlanta Insurance's fraud detection capabilities and claims processing efficiency."
+      
+      "In my role, I ensured adherence to best practices, timelines, and quality standards, overseeing feature engineering and model development. Collaborating with a team of two data scientists, our collective efforts delivered a project that brought about tangible cost savings and surpassed company expectations, showcasing the impactful results of our work."   ]
+  },
+  {
+    id: 3,
     title: "ML-driven Bank's Customer Segmentation",
     role: "Data Scientist",
     Description:[
@@ -21,7 +31,7 @@ const pdetails = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: "Energy Production, Consumption and Demand Forecasting",
     role: "Data Scientist",
     Description:[
@@ -32,7 +42,7 @@ const pdetails = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     title: "Urban Mobility Analysis",
     role: "Data Scientist",
     Description:[
@@ -43,7 +53,7 @@ const pdetails = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     title: "Cashflow Forecasting",
     role: "Data Scientist",
     Description:[
@@ -55,7 +65,7 @@ const pdetails = [
     ]
   },
   {
-    id: 6,
+    id: 7,
     title: "Energy Production Forecasting",
     role: "Data Scientist",
     Description:[
@@ -65,7 +75,7 @@ const pdetails = [
     ]
   },
   {
-    id: 7,
+    id: 8,
     title: "Investment Intentions Forecasting",
     role: "Data Scientist",
     Description:[
@@ -78,7 +88,7 @@ const pdetails = [
 "In summary, my role as a Data Scientist   involved web scraping using Selenium, handling diverse data sources, and applying advanced deep learning techniques for forecasting investment intentions. Through collaboration, innovation, and robust data handling, we delivered a reliable forecasting solution that met the client's needs."    ]
   },
   {
-    id: 8,
+    id: 9,
     title: "Student Academic Success Forecasting",
     role: "Data Scientist Intern at National School of Applied Sciences of Khouribga, Morocco",
     Description:[
@@ -87,66 +97,5 @@ const pdetails = [
       "The project was implemented using Python, scikit-learn, Pandas, and Seaborn. The successful development and deployment of the predictive model allowed educational institutions to proactively identify students who may face learning difficulties. By providing targeted support and interventions, educators could help these students overcome challenges and achieve their full academic potential."
       
     ]
-  },
-  {
-    id: 9,
-    title: "Drowsiness Detection",
-    role: "Freelance project",
-    Description:[
-      "During my freelancing experience, I undertook an exciting project focused on drowsiness detection. The objective was to develop a system that could detect signs of drowsiness in individuals, particularly drivers, to prevent accidents and ensure road safety.",
-      "To accomplish this, I gathered a diverse dataset consisting of video recordings captured from in-car cameras and various physiological signals such as eye movement, head pose, and blink frequency. These signals were crucial in identifying patterns associated with drowsiness.",
-      "In the project, I employed a combination of computer vision and machine learning techniques. Initially, I used OpenCV to extract facial landmarks and track facial features in real-time from the video data. This allowed me to monitor eye closure, yawning, and other indicators of drowsiness.",
-      "Next, I leveraged machine learning algorithms to classify the extracted features and determine the likelihood of drowsiness. Specifically, I experimented with various models such as Convolutional Neural Networks (CNNs) and Recurrent Neural Networks (RNNs) to capture both spatial and temporal information from the data.",
-      "The methodology involved a two-step process: feature extraction and classification. In the feature extraction step, I used pre-trained models such as VGGNet or ResNet to extract high-level features from the facial images. These features were then fed into the classification models, which were trained on labeled data to differentiate between alert and drowsy states.",
-      "To evaluate the system's performance, I employed techniques such as k-fold cross-validation and calculated metrics like accuracy, precision, recall, and F1 score. For instance, the accuracy of the drowsiness detection system reached an impressive 92%, indicating its ability to correctly identify drowsy states with a high degree of accuracy.",
-      "Throughout the project, I followed an iterative approach, constantly refining the models and incorporating feedback from clients or domain experts. This ensured that the system could generalize well to different individuals and lighting conditions, enhancing its real-world applicability.",
-      "In summary, my freelancing project on drowsiness detection involved working with a diverse dataset comprising video recordings and physiological signals. By combining computer vision techniques with machine learning models, I developed a system capable of detecting signs of drowsiness. The methodology included feature extraction and classification using models like CNNs and RNNs. With an accuracy of 92%, the system demonstrated its high level of accuracy in identifying drowsy states. Through an iterative process, I refined the models to achieve accurate and practical drowsiness detection."
-    ]
   }
 ]
-
-// const pdetails = [
-//   {
-//     id: 1,
-//     title: "AI-driven Customer Segmentation for a Bank",
-//     role: "Data Scientist  ",
-//     objective: "To enhance the bank's customer segmentation strategy using AI and machine learning techniques to drive business growth.",
-//     methodologies: [
-//       {
-//         title: "Data Quality Reporting:",
-//         details: [
-//           "Prepared a data dictionary and analyzed the bank's customer data.",
-//           "Identified and reported null values, incoherent values, outliers, invalid data, and duplicates."
-//         ]
-//       },
-//       {
-//         title: "Scoring Variables Creation:",
-//         details: [
-//           "Developed scoring variables to assess the quality of customer segmentation based on the bank's objectives and goals."
-//         ]
-//       },
-//     ],
-//     result: "By leveraging AI and machine learning techniques, we significantly improved the bank's customer segmentation strategy. Our approach not only provided insights into the characteristics and profiles of each customer segment but also led to the development of a highly accurate assignment engine. This project's success empowered the bank to make more informed decisions, tailor its marketing and sales strategies to each segment, and ultimately drive business growth."
-//   },
-//   {
-//     id: 2,
-//     title: "Title of Popup 2",
-//     overview: "",
-//     methodology: "",
-//     result: ""
-//   },
-//   {
-//     id: 3,
-//     title: "Title of Popup 3",
-//     overview: "",
-//     methodology: "",
-//     result: ""
-//   },
-//   {
-//     id: 4,
-//     title: "Title of Popup 4",
-//     overview: "",
-//     methodology: "",
-//     result: ""
-//   },
-// ]
