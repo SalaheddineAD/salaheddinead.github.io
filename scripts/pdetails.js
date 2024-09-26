@@ -1,8 +1,8 @@
 const pdetails = [
   {
     id: 1,
-    title: "Fraudulent Automobile Claims Detection",
-    role: "Data Scientist",
+    title: "Demand Forecasting and Inventory Optimization at Toyota",
+    role: "Senior Data Scientist",
     Description:[
       "As the project lead, I orchestrated the development of a robust fraud detection system for Atlanta Insurance's auto claims, overseeing a team of two Data Scientists. My individual contributions encompassed meticulous data preparation, feature engineering, and strategic model implementation to effectively identify fraudulent claims."
       "Leveraging Python, scikit-learn, CUDA, PySpark, Power BI, and XGBoost, I crafted a comprehensive solution. Our system, incorporating supervised machine learning models (AdaBoost, XGBoost, SVM) and unsupervised techniques (Isolation Forest, DBSCAN), not only met but exceeded expectations. Deploying the model using Azure Web Service, we achieved a 30% reduction in fraud-related costs, significantly enhancing Atlanta Insurance's fraud detection capabilities and claims processing efficiency."
@@ -12,7 +12,7 @@ const pdetails = [
   {
     id: 2,
     title: "Fraudulent Automobile Claims Detection",
-    role: "Data Scientist",
+    role: "Machine Learning Engineer",
     Description:[
       "As the project lead, I orchestrated the development of a robust fraud detection system for Atlanta Insurance's auto claims, overseeing a team of two Data Scientists. My individual contributions encompassed meticulous data preparation, feature engineering, and strategic model implementation to effectively identify fraudulent claims."
       "Leveraging Python, scikit-learn, CUDA, PySpark, Power BI, and XGBoost, I crafted a comprehensive solution. Our system, incorporating supervised machine learning models (AdaBoost, XGBoost, SVM) and unsupervised techniques (Isolation Forest, DBSCAN), not only met but exceeded expectations. Deploying the model using Azure Web Service, we achieved a 30% reduction in fraud-related costs, significantly enhancing Atlanta Insurance's fraud detection capabilities and claims processing efficiency."
@@ -22,7 +22,7 @@ const pdetails = [
   {
     id: 3,
     title: "ML-driven Bank's Customer Segmentation",
-    role: "Data Scientist",
+    role: "Machine Learning Engineer",
     Description:[
       "As a Data Scientist, I worked on an AI-driven customer segmentation project to enhance the bank's customer segmentation strategy and drive business growth. The project involved several steps, starting with data quality reporting, where we prepared a data dictionary and analyzed the bank's customer data to identify and report null values, incoherent values, outliers, invalid data, and duplicates.",
       "Next, we created scoring variables to assess the quality of customer segmentation based on the bank's objectives and goals. We then developed over 100 Key Performance Indicators (KPIs) for use in machine learning models, cleaned and structured the data, and employed machine learning algorithms such as hierarchical clustering and K-means for customer segmentation.",
@@ -33,7 +33,7 @@ const pdetails = [
   {
     id: 4,
     title: "Energy Production, Consumption and Demand Forecasting",
-    role: "Data Scientist",
+    role: "Machine Learning Engineer",
     Description:[
       "As a Data Scientist, I worked on a project to create highly accurate forecasting models for energy production, consumption, and demand. The project involved a meticulous methodology that began with data quality reporting, where we analyzed the dataset to identify missing data, duplicates, incoherent data, and outliers. We prepared a report on the analysis for the client, which helped them to better understand the quality of their data.",
       "We then cleaned and structured the dataset to be suitable for machine learning models. In the first iteration of building machine learning models, we utilized the client's data to create forecasting models for energy production, demand, and consumption. We achieved Mean Absolute Percentage Errors (MAPE) of 0.015%, 0.03%, and 0.035% for energy production, demand, and consumption models, respectively, using models like Long Short-Term Memory (LSTM), Temporal Fusion Transformer (TFT), and Facebook's Prophet.",
@@ -44,7 +44,7 @@ const pdetails = [
   {
     id: 5,
     title: "Urban Mobility Analysis",
-    role: "Data Scientist",
+    role: "Machine Learning Engineer",
     Description:[
       "I worked on a challenging project involving the analysis of urban mobility using GPS data. The objective of the project was to identify bottlenecks, create mobility flow datasets, and visualize the results using various tools. Our team faced several challenges in this project, including working with GPS data from multiple sources and formats, and the need to use advanced clustering algorithms to identify urban bottlenecks.",
       'We began the project by collecting and exploring GPS data from various sources such as smartphones, IoT devices, and transportation systems. The data preprocessing step was particularly important, as we needed to eliminate noise, inaccuracies, and missing values to ensure that the data was suitable for further analysis. We also used DBSCAN, a powerful clustering algorithm, to identify urban bottlenecks and high-density areas with traffic congestion or limited mobility.',
@@ -55,7 +55,7 @@ const pdetails = [
   {
     id: 6,
     title: "Cashflow Forecasting",
-    role: "Data Scientist",
+    role: "Machine Learning Engineer",
     Description:[
       "As a Data Scientist, I contributed significantly to accurately predicting cash flows for an electricity and water utility company. This project involved analyzing specific types of data relevant to the utility industry, such as electricity and water consumption meters, customer billing records, tariff structures, operational costs, and maintenance expenses.",
 "Handling the high volumes of time-series data, including hourly or daily consumption data, billing records, and external factors like weather patterns and market dynamics, presented unique challenges. Leveraging advanced analytics techniques, we utilized time series analysis, regression models, and forecasting algorithms to capture relationships and patterns within the data.",
@@ -67,7 +67,7 @@ const pdetails = [
   {
     id: 7,
     title: "Energy Production Forecasting",
-    role: "Data Scientist",
+    role: "Machine Learning Engineer",
     Description:[
       "As a Data Scientist, I contributed to a project to create a highly accurate forecasting model for energy production for a large electric utility.  We had hourly data of the electricity production for each wind turbine for each site and we were dealing with many gigabytes of data",
       " We dealied with missing data, by implementing robust data preprocessing techniques to handle these issues effectively. We automated an ETL pipeline to clean data from the source and store them in a data lake using Azure DataFactory. We built Deep learning models such as Long Short-Term Memory (LSTM), Temporal Fusion Transformer (TFT), and Gated Recurrent Unit (GRU) using Tensorflow and PyTorch. We checked the values that didn't make sense and which the models couldn't predict the result. We collaborated with the client during each sprint to find what features could be added and how we can further improve the models.",
@@ -77,7 +77,7 @@ const pdetails = [
   {
     id: 8,
     title: "Investment Intentions Forecasting",
-    role: "Data Scientist",
+    role: "Machine Learning Engineer",
     Description:[
       "As a Data Scientist, I played a crucial role in a project focused on accurately forecasting investment intentions. This involved predicting the likelihood of individuals or organizations investing in various financial instruments.",
 "To gather the necessary data, I utilized web scraping techniques with Selenium, extracting information from different sources such as financial websites, social media platforms, and market news. Handling vast amounts of data, often spanning gigabytes, required robust data handling techniques to ensure accuracy.",
@@ -90,7 +90,7 @@ const pdetails = [
   {
     id: 9,
     title: "Student Academic Success Forecasting",
-    role: "Data Scientist Intern at National School of Applied Sciences of Khouribga, Morocco",
+    role: "Machine Learning Researcher",
     Description:[
       "I took on the challenging project of predicting which students were likely to face learning difficulties and developing a targeted support system to help them succeed academically. The project involved several complex steps, starting with data cleaning, analysis, and visualization. I ensured the quality and integrity of the educational dataset, conducted a comprehensive analysis of the data, and visualized the data using tools such as Seaborn and Pandas to generate insights to inform the development of the predictive model.",
       "I proceeded with feature engineering and selection, creating and selecting relevant features from the dataset such as demographic information, academic history, and social factors to be used as input for the machine learning model. Using scikit-learn, I developed a supervised machine learning model to predict students who may face learning difficulties and conducted model evaluation using cross-validation, performance metrics, and comparison to alternative models to ensure the chosen model achieved the highest accuracy and generalizability.",
