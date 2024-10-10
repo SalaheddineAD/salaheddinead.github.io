@@ -3,7 +3,7 @@ const projects = [
     id: 1,
     image: "images/images_for_projects/Toyota.jpeg",
     title: "Demand Forecasting and Inventory Optimization at Toyota",
-    company: "2020 - 2022",
+    company: "2024 - 2025",
     detail: "seats remaining: 2",
     text: "",
     pageUrl: "DemandForecasting.html"
