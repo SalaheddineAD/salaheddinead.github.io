@@ -221,3 +221,7 @@ hr {
 
 
 }
+
+html {
+  scroll-behavior: smooth;
+}
