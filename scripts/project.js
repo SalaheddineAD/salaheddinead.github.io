@@ -4,7 +4,7 @@ const projects = [
     image: "images/images_for_projects/Toyota.jpeg",
     title: "Demand Forecasting and Inventory Optimization at Toyota",
     company: "2024 - 2025",
-    detail: "seats remaining: 2",
+    detail: "",
     text: "",
     pageUrl: "DemandForecasting.html"
   },
@@ -13,7 +13,7 @@ const projects = [
     image: "images/images_for_projects/frauddetection.jpg",
     title: "Fraudulent Automobile Claims Detection",
     company: "2020 - 2022",
-    detail: "seats remaining: 2",
+    detail: "",
     text: "",
     pageUrl: "FraudDetection.html"
   },
@@ -22,7 +22,7 @@ const projects = [
     image: "images/images_for_projects/bankCustomerSegmentation.png",
     title: "Bank Customer Segmentation",
     company: "2020 - 2022",
-    detail: "seats remaining: 2",
+    detail: "",
     text: "",
     pageUrl: "BankCustomerSegmentation.html"
   },
@@ -31,7 +31,7 @@ const projects = [
     image: "images/images_for_projects/EnergyForecasting.jpg",
     title: "Energy Production, consumption and demand Forecasting",
     company: "2020 - 2022",
-    detail: "seats remaining: 2",
+    detail: "",
     text: "",
     pageUrl: "EnergyForecasting.html"
   },
@@ -40,7 +40,7 @@ const projects = [
     image: "images/images_for_projects/urban_mobility_analysis.jpg",
     title: "urban Mobility Analysis",
     company: "2020 - 2022",
-    detail: "seats remaining: 2",
+    detail: "",
     text: "",
     pageUrl: "UrbanMobilityAnalysis.html"
   },
@@ -49,7 +49,7 @@ const projects = [
     image: "images/images_for_projects/RevenueForecasting2.jpg",
     title: "Cashflow Forecasting",
     company: "2020 - 2022",
-    detail: "seats remaining: 2",
+    detail: "",
     text: "",
     pageUrl: "revenueForecasting.html"
   },
@@ -58,7 +58,7 @@ const projects = [
     image: "images/images_for_projects/EnergyForecasting2.jpg",
     title: "Energy Production Forecasting",
     company: "2020 - 2022",
-    detail: "seats remaining: 2",
+    detail: "",
     text: "",
     pageUrl: "EnergyProductionForecasting.html"
   },
@@ -67,7 +67,7 @@ const projects = [
     image: "images/images_for_projects/InvestmentForecasting.jpg",
     title: "Investment Intentions Forecasting",
     company: "2020 - 2022",
-    detail: "seats remaining: 2",
+    detail: "",
     text: "",
     pageUrl: "InvestmentIntentionsForecasting.html"
   },
@@ -76,7 +76,7 @@ const projects = [
     image: "images/images_for_projects/studentGradeForecasting.jpg",
     title: "Student Academic Success Forecasting",
     company: "2019 - 2020",
-    detail: "seats remaining: 2",
+    detail: "",
     text: "",
     pageUrl: "StudentsGradesForecasting.html"
   }
