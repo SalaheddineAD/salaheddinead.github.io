@@ -2,8 +2,8 @@ name: Upload Website to S3
 
 on:
   push:
-    branches:
-      - main   # Runs the workflow on push to the 'main' branch
+    tags:
+      - 'v*'   # Runs the workflow only on push of tags that match the pattern v*
 
 jobs:
   deploy:
@@ -12,9 +12,7 @@ jobs:
     steps:
     # Step 1: Check out the code from the repository
     - name: Checkout code
-      uses: actions/checkout@master
-      with:
-        fetch-depth: 0    # Fetch all history for all tags and branches
+      uses: actions/checkout@v3
 
     # Step 2: Sync files to the S3 bucket
     - name: Sync files to S3
@@ -25,19 +23,3 @@ jobs:
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
-
-    - name: Get current version
-        id: get_version
-        run: |
-          VERSION=$(cat VERSION.txt)
-          echo "Current version is $VERSION"
-          echo "::set-output name=VERSION::$VERSION"
-
-      - name: Create tag
-        run: |
-          git config user.name "Salah Eddine Ait Daoud"
-          git config user.email "salahdaoud858@gmail.com"
-          git tag -a "v${{ steps.get_version.outputs.VERSION }}" -m "Release v${{ steps.get_version.outputs.VERSION }}"
-          git push origin "v${{ steps.get_version.outputs.VERSION }}"
-
