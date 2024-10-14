@@ -2,8 +2,8 @@ name: Upload Website to S3
 
 on:
   push:
-    branches:
-      - main   # Runs the workflow on push to the 'main' branch
+    tags:
+      - 'v*'   # Runs the workflow only on push of tags that match the pattern v*
 
 jobs:
   deploy:
@@ -12,7 +12,7 @@ jobs:
     steps:
     # Step 1: Check out the code from the repository
     - name: Checkout code
-      uses: actions/checkout@master
+      uses: actions/checkout@v3
 
     # Step 2: Sync files to the S3 bucket
     - name: Sync files to S3
