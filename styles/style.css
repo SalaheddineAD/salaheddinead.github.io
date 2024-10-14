@@ -222,6 +222,15 @@ hr {
 
 }
 
-html {
-  scroll-behavior: smooth;
+/* Adjust the image size if necessary */
+#aboutme img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Optional: Add margin below the image on small screens */
+@media (max-width: 767.98px) {
+  #aboutme img {
+    margin-bottom: 20px;
+  }
 }
