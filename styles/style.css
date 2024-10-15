@@ -225,11 +225,11 @@ hr {
 /* Adjust the image size if necessary */
 #aboutme img {
   max-width: 100%;
-  height: auto;
+  /* height: auto; */
 }
 
 /* Optional: Add margin below the image on small screens */
-@media (max-width: 767.98px) {
+@media (max-width: 700px) {
   #aboutme img {
     margin-bottom: 20px;
   }
