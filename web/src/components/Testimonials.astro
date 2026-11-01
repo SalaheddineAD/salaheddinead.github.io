@@ -14,23 +14,56 @@ const initials = (name: string) => name.split(' ').map((w) => w[0]).slice(0, 2).
 ---
 
 <section class="testimonials" aria-labelledby="testimonials-title">
-  <div class="wrap inner">
+  <div class="wrap inner carousel" aria-roledescription="carousel" aria-labelledby="testimonials-title" data-carousel>
     <h2 id="testimonials-title" class="section-title">What people say</h2>
-    <div class="grid">
-      {testimonials.map((t) => {
-        const photo = photoFor(t.photo);
-        return (
-          <figure>
-            <blockquote>{t.quote}</blockquote>
-            <figcaption>
-              {photo
-                ? <Image src={photo} alt="" width={96} height={96} class="avatar" loading="lazy" />
-                : <span class="avatar initials" aria-hidden="true">{initials(t.name)}</span>}
-              <span><span class="name">{t.name}</span><span class="role">{t.role}</span></span>
-            </figcaption>
-          </figure>
-        );
-      })}
+
+    <div class="viewport">
+      <div class="track" aria-live="off" data-track>
+        {testimonials.map((t, i) => {
+          const photo = photoFor(t.photo);
+          return (
+            <div
+              class="slide"
+              role="group"
+              aria-roledescription="slide"
+              aria-label={`${i + 1} of ${testimonials.length}`}
+              data-slide
+            >
+              <figure>
+                <blockquote>{t.quote}</blockquote>
+                <figcaption>
+                  {photo
+                    ? <Image src={photo} alt="" width={96} height={96} class="avatar" loading="lazy" />
+                    : <span class="avatar initials" aria-hidden="true">{initials(t.name)}</span>}
+                  <span><span class="name">{t.name}</span><span class="role">{t.role}</span></span>
+                </figcaption>
+              </figure>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="dots">
+        {testimonials.map((t, i) => (
+          <button type="button" class="dot" data-dot={i} aria-label={`Show recommendation from ${t.name}`} aria-current={i === 0 ? 'true' : 'false'}>
+            <span aria-hidden="true"></span>
+          </button>
+        ))}
+      </div>
+      <div class="arrows">
+        <button type="button" class="ctrl" data-pause aria-label="Pause rotation">
+          <svg class="icon-pause" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"></rect><rect x="14" y="5" width="4" height="14" rx="1"></rect></svg>
+          <svg class="icon-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"></path></svg>
+        </button>
+        <button type="button" class="ctrl" data-prev aria-label="Previous recommendation">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>
+        </button>
+        <button type="button" class="ctrl" data-next aria-label="Next recommendation">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+        </button>
+      </div>
     </div>
   </div>
 </section>
@@ -38,30 +71,66 @@ const initials = (name: string) => name.split(' ').map((w) => w[0]).slice(0, 2).
 <style>
   .testimonials { background: var(--soft); }
 
-  .inner { padding-top: 96px; padding-bottom: 96px; }
-
-  .grid {
-    margin-top: 36px;
+  /* Wide screens: heading and controls on the left, the quote on the right.
+     Narrow screens: heading, quote, controls stacked. */
+  .inner {
+    padding-top: 80px;
+    padding-bottom: 80px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 'title' 'viewport' 'controls';
+    row-gap: 16px;
+  }
+
+  .section-title { grid-area: title; margin-bottom: 20px; }
+  .viewport { grid-area: viewport; min-width: 0; }
+  .controls { grid-area: controls; }
+
+  @media (min-width: 900px) {
+    .inner {
+      grid-template-columns: 340px minmax(0, 1fr);
+      grid-template-rows: auto 1fr;
+      grid-template-areas: 'title viewport' 'controls viewport';
+      column-gap: 48px;
+    }
+    .section-title { margin-bottom: 0; }
+    .controls { align-self: end; flex-wrap: wrap; }
+  }
+
+  .viewport {
+    overflow: hidden;
+    border-radius: 16px;
+  }
+
+  /* Slides sit side by side; the track slides left. Every slide takes the
+     height of the tallest one, so the section never jumps between quotes. */
+  .track {
+    display: flex;
+    transition: transform 0.6s ease;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    padding: 40px 48px;
+    border-radius: 16px;
+    background: var(--card);
   }
 
   figure {
+    height: 100%;
     margin: 0;
-    padding: 32px;
-    border-radius: 16px;
-    background: var(--card);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 24px;
+    gap: 28px;
   }
 
   blockquote {
     margin: 0;
+    max-width: 62ch;
     font-family: var(--serif);
-    font-size: 21px;
+    font-size: 24px;
     line-height: 1.5;
   }
 
@@ -92,10 +161,139 @@ const initials = (name: string) => name.split(' ').map((w) => w[0]).slice(0, 2).
   .name { display: block; font-weight: 600; }
   .role { color: var(--muted); }
 
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .dots { display: flex; }
+
+  /* 44px tap target around a small visible dot. */
+  .dot {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dot span {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: var(--line);
+    transition: width 0.3s ease, background-color 0.3s ease;
+  }
+
+  .dot[aria-current='true'] span {
+    width: 28px;
+    background: var(--ink);
+  }
+
+  .arrows { display: flex; gap: 6px; }
+
+  .ctrl {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: var(--card);
+    color: var(--ink);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-play { display: none; }
+  .ctrl[data-paused] .icon-play { display: block; }
+  .ctrl[data-paused] .icon-pause { display: none; }
+
   @media (max-width: 600px) {
     .inner { padding-top: 72px; padding-bottom: 72px; }
-    .grid { grid-template-columns: 1fr; }
-    figure { padding: 24px; }
+    .slide { padding: 24px; }
     blockquote { font-size: 19px; }
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    .track, .dot span { transition: none; }
+  }
 </style>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-carousel]')!;
+  const track = root.querySelector<HTMLElement>('[data-track]')!;
+  const slides = [...root.querySelectorAll<HTMLElement>('[data-slide]')];
+  const dots = [...root.querySelectorAll<HTMLButtonElement>('[data-dot]')];
+  const pauseButton = root.querySelector<HTMLButtonElement>('[data-pause]')!;
+  const INTERVAL = 7000;
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let index = 0;
+  let timer: number | undefined;
+  // Paused by the visitor (button) vs. paused while they read (hover/focus).
+  let userPaused = reducedMotion;
+  let holding = false;
+
+  function show(i: number) {
+    index = (i + slides.length) % slides.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    slides.forEach((s, n) => {
+      const active = n === index;
+      s.setAttribute('aria-hidden', String(!active));
+    });
+    dots.forEach((d, n) => d.setAttribute('aria-current', String(n === index)));
+  }
+
+  function schedule() {
+    window.clearInterval(timer);
+    if (!userPaused && !holding && !document.hidden) {
+      timer = window.setInterval(() => show(index + 1), INTERVAL);
+    }
+  }
+
+  function syncPauseButton() {
+    pauseButton.toggleAttribute('data-paused', userPaused);
+    pauseButton.setAttribute('aria-label', userPaused ? 'Start rotation' : 'Pause rotation');
+    // Announce slide changes only when the visitor is driving them.
+    track.setAttribute('aria-live', userPaused ? 'polite' : 'off');
+  }
+
+  root.querySelector('[data-prev]')!.addEventListener('click', () => { show(index - 1); schedule(); });
+  root.querySelector('[data-next]')!.addEventListener('click', () => { show(index + 1); schedule(); });
+  dots.forEach((d, n) => d.addEventListener('click', () => { show(n); schedule(); }));
+
+  pauseButton.addEventListener('click', () => {
+    userPaused = !userPaused;
+    syncPauseButton();
+    schedule();
+  });
+
+  root.addEventListener('mouseenter', () => { holding = true; schedule(); });
+  root.addEventListener('mouseleave', () => { holding = root.contains(document.activeElement); schedule(); });
+  root.addEventListener('focusin', () => { holding = true; schedule(); });
+  root.addEventListener('focusout', (e) => {
+    if (!root.contains(e.relatedTarget as Node)) { holding = root.matches(':hover'); schedule(); }
+  });
+  document.addEventListener('visibilitychange', schedule);
+
+  // Swipe on touch screens.
+  let startX: number | null = null;
+  track.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', (e) => {
+    if (startX === null) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) { show(index + (dx < 0 ? 1 : -1)); schedule(); }
+    startX = null;
+  });
+
+  show(0);
+  syncPauseButton();
+  schedule();
+</script>
