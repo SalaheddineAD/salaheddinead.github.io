@@ -17,8 +17,24 @@ export const certifications = [
   { name: 'AWS Certified Generative AI Developer, Professional', status: 'In progress, expected December 2026', earned: false },
 ];
 
+/** `photo` is the file name in src/assets/testimonials/; initials show until it exists. */
 export const testimonials = [
-  { quote: '[Paste a recommendation from a manager or client here, one to three sentences.]', name: '[Name]', role: '[Role, Company]' },
-  { quote: '[Paste a recommendation from a colleague or teammate here.]', name: '[Name]', role: '[Role, Company]' },
-  { quote: '[Paste a third recommendation here.]', name: '[Name]', role: '[Role, Company]' },
+  {
+    quote: '“I had the pleasure of collaborating with Salah on a significant Car Insurance Fraud Detection project … Beyond technical skills, his clear communication and mentoring were instrumental in our project’s success.”',
+    name: 'Hamza Benjelloun',
+    role: 'Delivery AI Data Engineer, BCG X',
+    photo: 'hamza-benjelloun',
+  },
+  {
+    quote: '“Salah’s mastery of the entire machine learning project lifecycle is truly remarkable. … He is an exceptional team leader and product manager with a keen eye for system design and architecture. … Salah also possesses excellent communication skills, allowing him to explain complex technical concepts in a way that everyone can understand.”',
+    name: 'Mohamed Derri',
+    role: 'Senior ML Engineer (Level 5), Transurban',
+    photo: 'mohamed-derri',
+  },
+  {
+    quote: '“Salah proved to be an excellent addition to our team, demonstrating a seamless integration, a keen enthusiasm for learning, and a notably friendly demeanor. If you are seeking a data scientist to enhance your team, I wholeheartedly recommend Salah.”',
+    name: 'Wail Benhaddou',
+    role: 'Co-founder & CTO, Nyance',
+    photo: 'wail-benhaddou',
+  },
 ];

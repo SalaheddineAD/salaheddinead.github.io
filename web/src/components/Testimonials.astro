@@ -1,17 +1,36 @@
 ---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
 import { testimonials } from '../data/career';
+
+const photos = import.meta.glob<{ default: ImageMetadata }>('../assets/testimonials/*.{jpg,jpeg,png,webp}', { eager: true });
+
+function photoFor(slug: string) {
+  const match = Object.entries(photos).find(([path]) => path.split('/').pop()!.replace(/\.\w+$/, '') === slug);
+  return match?.[1].default;
+}
+
+const initials = (name: string) => name.split(' ').map((w) => w[0]).slice(0, 2).join('');
 ---
 
 <section class="testimonials" aria-labelledby="testimonials-title">
   <div class="wrap inner">
     <h2 id="testimonials-title" class="section-title">What people say</h2>
     <div class="grid">
-      {testimonials.map((t) => (
-        <figure>
-          <blockquote>{t.quote}</blockquote>
-          <figcaption><span class="name">{t.name}</span><span class="role">{t.role}</span></figcaption>
-        </figure>
-      ))}
+      {testimonials.map((t) => {
+        const photo = photoFor(t.photo);
+        return (
+          <figure>
+            <blockquote>{t.quote}</blockquote>
+            <figcaption>
+              {photo
+                ? <Image src={photo} alt="" width={96} height={96} class="avatar" loading="lazy" />
+                : <span class="avatar initials" aria-hidden="true">{initials(t.name)}</span>}
+              <span><span class="name">{t.name}</span><span class="role">{t.role}</span></span>
+            </figcaption>
+          </figure>
+        );
+      })}
     </div>
   </div>
 </section>
@@ -35,7 +54,8 @@ import { testimonials } from '../data/career';
     background: var(--card);
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 24px;
   }
 
   blockquote {
@@ -45,7 +65,30 @@ import { testimonials } from '../data/career';
     line-height: 1.5;
   }
 
-  figcaption { font-size: 15px; }
+  figcaption {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 15px;
+  }
+
+  .avatar {
+    flex: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .initials {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--soft);
+    font-weight: 600;
+    font-size: 15px;
+  }
+
   .name { display: block; font-weight: 600; }
   .role { color: var(--muted); }
 
@@ -53,5 +96,6 @@ import { testimonials } from '../data/career';
     .inner { padding-top: 72px; padding-bottom: 72px; }
     .grid { grid-template-columns: 1fr; }
     figure { padding: 24px; }
+    blockquote { font-size: 19px; }
   }
 </style>
