@@ -1,4 +1,5 @@
-@import '@fontsource-variable/newsreader/opsz.css';
+@import '@fontsource/newsreader/latin-400.css';
+@import '@fontsource/newsreader/latin-500.css';
 @import '@fontsource-variable/public-sans/wght.css';
 @import './tokens.css';
 

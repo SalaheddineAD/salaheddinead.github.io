@@ -13,7 +13,7 @@ export const education = [
 ];
 
 export const certifications = [
-  { name: 'AWS Certified Machine Learning, Specialty', status: 'Earned March 2025', earned: true },
+  { name: 'AWS Certified Machine Learning, Specialty', status: 'Earned March 2025', earned: true, verifyUrl: 'https://www.credly.com/badges/bcaa12cb-beb9-4c18-9d14-7d4a0726cced/' },
   { name: 'AWS Certified Generative AI Developer, Professional', status: 'In progress, expected December 2026', earned: false },
 ];
 

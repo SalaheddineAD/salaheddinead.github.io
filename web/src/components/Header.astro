@@ -4,16 +4,13 @@ import ThemeToggle from './ThemeToggle.astro';
 
 <header class="site-header">
   <div class="wrap bar">
-    <a href="#top" class="name">Salah Daoud</a>
-    <div class="right">
-      <nav aria-label="Main">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <ThemeToggle />
-    </div>
+    <nav aria-label="Main">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <ThemeToggle />
   </div>
 </header>
 
@@ -30,38 +27,28 @@ import ThemeToggle from './ThemeToggle.astro';
     padding-top: 24px;
     padding-bottom: 24px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
+    gap: 26px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
 
-  .name {
-    font-family: var(--serif);
-    font-size: 22px;
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-  }
-
-  .right,
   nav {
     display: flex;
     gap: 26px;
     align-items: center;
+    font-size: 15px;
   }
-
-  nav { font-size: 15px; }
 
   nav a { text-decoration: none; }
 
-  /* Phones: name and toggle share the first row, links take the second. */
+  /* Phones: links on the left, toggle on the right, one row. */
   @media (max-width: 600px) {
-    .bar { padding-top: 16px; padding-bottom: 0; row-gap: 4px; }
-    .right { display: contents; }
-    nav { order: 1; flex-basis: 100%; gap: 0; margin-left: -8px; }
+    .bar { padding-top: 12px; padding-bottom: 12px; justify-content: space-between; gap: 8px; }
+    nav { gap: 0; margin-left: -8px; }
     nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px; }
+  }
+
+  @media (max-width: 360px) {
+    nav a { padding: 0 6px; font-size: 14px; }
   }
 </style>

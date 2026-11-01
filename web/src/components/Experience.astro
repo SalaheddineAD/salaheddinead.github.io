@@ -33,6 +33,11 @@ import { certifications, education, jobs } from '../data/career';
           <li class:list={['cert', { pending: !c.earned }]}>
             <p class="cert-name">{c.name}</p>
             <p class="cert-status">{c.status}</p>
+            {c.verifyUrl && (
+              <a class="verify" href={c.verifyUrl} target="_blank" rel="noopener">
+                Verify on Credly<span class="visually-hidden"> (opens in a new tab)</span>
+              </a>
+            )}
           </li>
         ))}
       </ul>
@@ -115,6 +120,16 @@ import { certifications, education, jobs } from '../data/career';
 
   .cert-name { margin: 0; font-size: 16px; font-weight: 600; }
   .cert-status { margin: 6px 0 0; font-size: 14px; color: var(--muted); }
+
+  .verify {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    margin-bottom: -10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-underline-offset: 3px;
+  }
 
   @media (max-width: 600px) {
     .experience { padding-top: 72px; padding-bottom: 72px; }

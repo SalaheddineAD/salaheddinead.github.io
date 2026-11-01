@@ -6,6 +6,8 @@
   --ink: #152536;
   --muted: #52637A;
   --line: #D5DFE8;
+  /* Outlines of controls; 3:1 against --soft and --card. */
+  --line-strong: #7A8DA3;
   --glass: rgba(255, 255, 255, 0.6);
   --sky-1: #DCE8F2;
   --sky-2: #F4F8FB;
@@ -17,10 +19,12 @@
   --tint-forecasting: #4F7D93, #9CC0CF;
   --tint-mlops: #4C6378, #93A8BB;
   --tint-optimization: #6B7F95, #B3C2CF;
+  --tint-data-science: #5C6B8A, #A9B5CC;
   --tile-overlay: rgba(21, 37, 54, 0.78);
+  --card-shadow: 0 1px 2px rgba(21, 37, 54, 0.06), 0 12px 32px rgba(21, 37, 54, 0.08);
   --focus: #6F98C2;
 
-  --serif: 'Newsreader Variable', Georgia, serif;
+  --serif: 'Newsreader', Georgia, serif;
   --sans: 'Public Sans Variable', system-ui, sans-serif;
 
   --max: 1200px;
@@ -35,12 +39,14 @@
   --ink: #E9EFF5;
   --muted: #A7B6C6;
   --line: #2A4157;
+  --line-strong: #5E7891;
   --glass: rgba(14, 26, 39, 0.55);
   --sky-1: #0B1622;
   --sky-2: #22384D;
   --mountain-1: #2B4258;
   --mountain-2: #1E3246;
   --mountain-3: #152637;
+  --card-shadow: none;
 }
 
 @media (max-width: 600px) {

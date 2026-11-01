@@ -1,12 +1,15 @@
 ---
+import { Picture } from 'astro:assets';
 import type { Project } from '../data/projects';
+import { projectPhoto } from '../data/projectPhotos';
 
 interface Props {
   project: Project;
 }
 
 const { project: p } = Astro.props;
-const tint = `var(--tint-${p.cat.toLowerCase()})`;
+const tint = `var(--tint-${p.cat.toLowerCase().replace(/\s+/g, '-')})`;
+const photo = projectPhoto(p.id);
 ---
 
 <button
@@ -16,8 +19,21 @@ const tint = `var(--tint-${p.cat.toLowerCase()})`;
   aria-haspopup="dialog"
 >
   <span class="frame">
-    <span class="ph" style={`background: linear-gradient(140deg, ${tint});`}></span>
-    <span class="photo-label" aria-hidden="true">{p.photoLabel}</span>
+    <span class="ph" style={`background: linear-gradient(140deg, ${tint});`}>
+      {photo && (
+        <Picture
+          src={photo}
+          alt=""
+          formats={['avif', 'webp']}
+          widths={[320, 480, 640]}
+          sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1240px) 45vw, 280px"
+          quality={55}
+          loading="lazy"
+          decoding="async"
+          fetchpriority="low"
+        />
+      )}
+    </span>
     <!-- The overlay text doubles as the button's accessible name. -->
     <span class="ov">
       <span class="cat">{p.cat}</span>
@@ -61,13 +77,22 @@ const tint = `var(--tint-${p.cat.toLowerCase()})`;
     transition: transform 0.5s ease;
   }
 
-  .photo-label {
+  .ph :global(img) {
     position: absolute;
-    left: 12px;
-    bottom: 10px;
-    font-size: 11px;
-    color: #FFFFFF;
-    opacity: 0.85;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* A light wash of the category tint ties the photos together. */
+  .ph::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    opacity: 0.22;
+    mix-blend-mode: multiply;
   }
 
   .ov {
