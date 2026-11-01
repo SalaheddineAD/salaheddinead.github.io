@@ -1,0 +1,27 @@
+---
+// Hero background. Kept separate so it can be swapped for the redesign later.
+---
+
+<svg viewBox="0 0 1440 640" preserveAspectRatio="xMidYMax slice" aria-hidden="true" class="mountains">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" style="stop-color: var(--sky-1)"></stop>
+      <stop offset="1" style="stop-color: var(--sky-2)"></stop>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="640" fill="url(#sky)"></rect>
+  <path d="M0 400 L120 340 L210 370 L330 290 L430 340 L540 270 L650 330 L760 260 L880 320 L990 280 L1100 340 L1220 290 L1340 330 L1440 300 L1440 640 L0 640Z" style="fill: var(--mountain-1)"></path>
+  <path d="M0 460 L140 380 L260 430 L380 360 L500 420 L620 370 L760 440 L880 380 L1010 430 L1130 370 L1260 420 L1440 380 L1440 640 L0 640Z" style="fill: var(--mountain-2)"></path>
+  <path d="M0 530 L180 450 L320 500 L470 440 L640 510 L800 460 L960 520 L1120 460 L1300 510 L1440 480 L1440 640 L0 640Z" style="fill: var(--mountain-3)"></path>
+  <path d="M0 600 L220 540 L420 580 L640 530 L860 590 L1080 545 L1280 585 L1440 560 L1440 640 L0 640Z" style="fill: var(--bg)"></path>
+</svg>
+
+<style>
+  .mountains {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+</style>

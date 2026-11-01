@@ -1,0 +1,64 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+---
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a href="#top" class="name">Salah Daoud</a>
+    <div class="right">
+      <nav aria-label="Main">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <ThemeToggle />
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 3;
+  }
+
+  .bar {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .name {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .right,
+  nav {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+  }
+
+  nav { font-size: 15px; }
+
+  nav a { text-decoration: none; }
+
+  /* Phones: name and toggle share the first row, links take the second. */
+  @media (max-width: 600px) {
+    .bar { padding-top: 16px; padding-bottom: 0; row-gap: 4px; }
+    .right { display: contents; }
+    nav { order: 1; flex-basis: 100%; gap: 0; margin-left: -8px; }
+    nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px; }
+  }
+</style>
