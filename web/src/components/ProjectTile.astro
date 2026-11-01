@@ -1,0 +1,126 @@
+---
+import type { Project } from '../data/projects';
+
+interface Props {
+  project: Project;
+}
+
+const { project: p } = Astro.props;
+const tint = `var(--tint-${p.cat.toLowerCase()})`;
+---
+
+<button
+  type="button"
+  class="tile"
+  data-open={p.id}
+  aria-haspopup="dialog"
+>
+  <span class="frame">
+    <span class="ph" style={`background: linear-gradient(140deg, ${tint});`}></span>
+    <span class="photo-label" aria-hidden="true">{p.photoLabel}</span>
+    <!-- The overlay text doubles as the button's accessible name. -->
+    <span class="ov">
+      <span class="cat">{p.cat}</span>
+      <span class="title">{p.title}</span>
+      <span class="tagline">{p.tagline}</span>
+      <span class="more">View details</span>
+    </span>
+  </span>
+  <span class="caption" aria-hidden="true">
+    <span class="cap-cat">{p.cat}</span>
+    <span class="cap-title">{p.title}</span>
+  </span>
+</button>
+
+<style>
+  .tile {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 14px;
+    background: none;
+    color: inherit;
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .frame {
+    position: relative;
+    display: block;
+    aspect-ratio: 4 / 3;
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--soft);
+  }
+
+  .ph {
+    position: absolute;
+    inset: 0;
+    transition: transform 0.5s ease;
+  }
+
+  .photo-label {
+    position: absolute;
+    left: 12px;
+    bottom: 10px;
+    font-size: 11px;
+    color: #FFFFFF;
+    opacity: 0.85;
+  }
+
+  .ov {
+    position: absolute;
+    inset: 0;
+    background: var(--tile-overlay);
+    color: #FFFFFF;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 8px;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+
+  .cat { font-size: 13px; color: #C9DAEA; }
+
+  .title {
+    font-family: var(--serif);
+    font-size: 24px;
+    line-height: 1.15;
+    font-weight: 500;
+  }
+
+  .tagline { font-size: 14px; line-height: 1.5; color: #E3ECF4; }
+
+  .more { margin-top: 6px; font-size: 13px; font-weight: 600; }
+
+  .tile:hover .ov,
+  .tile:focus-visible .ov { opacity: 1; }
+
+  .tile:hover .ph { transform: scale(1.04); }
+
+  /* Touch devices have no hover, so show the title under the tile instead. */
+  .caption { display: none; }
+
+  @media (hover: none) {
+    .caption {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding: 10px 2px 0;
+    }
+    .cap-cat { font-size: 13px; color: var(--muted); }
+    .cap-title { font-family: var(--serif); font-size: 20px; line-height: 1.2; font-weight: 500; }
+    .tile:hover .ov { opacity: 0; }
+    .tile:hover .ph { transform: none; }
+    .tile:focus-visible .ov { opacity: 1; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ov, .ph { transition: none; }
+    .tile:hover .ph { transform: none; }
+  }
+</style>

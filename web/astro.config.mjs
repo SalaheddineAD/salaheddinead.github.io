@@ -5,4 +5,5 @@ export default defineConfig({
   site: 'https://salahdaoud.com',
   integrations: [sitemap()],
   build: { inlineStylesheets: 'always' },
+  devToolbar: { enabled: false },
 });

@@ -1,0 +1,57 @@
+---
+import { testimonials } from '../data/career';
+---
+
+<section class="testimonials" aria-labelledby="testimonials-title">
+  <div class="wrap inner">
+    <h2 id="testimonials-title" class="section-title">What people say</h2>
+    <div class="grid">
+      {testimonials.map((t) => (
+        <figure>
+          <blockquote>{t.quote}</blockquote>
+          <figcaption><span class="name">{t.name}</span><span class="role">{t.role}</span></figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials { background: var(--soft); }
+
+  .inner { padding-top: 96px; padding-bottom: 96px; }
+
+  .grid {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  figure {
+    margin: 0;
+    padding: 32px;
+    border-radius: 16px;
+    background: var(--card);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  blockquote {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: 21px;
+    line-height: 1.5;
+  }
+
+  figcaption { font-size: 15px; }
+  .name { display: block; font-weight: 600; }
+  .role { color: var(--muted); }
+
+  @media (max-width: 600px) {
+    .inner { padding-top: 72px; padding-bottom: 72px; }
+    .grid { grid-template-columns: 1fr; }
+    figure { padding: 24px; }
+  }
+</style>

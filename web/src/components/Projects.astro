@@ -1,0 +1,116 @@
+---
+import { categories, projects } from '../data/projects';
+import ProjectTile from './ProjectTile.astro';
+import ProjectDialog from './ProjectDialog.astro';
+
+const filters = ['All', ...categories];
+---
+
+<section id="projects" class="wrap projects">
+  <div class="head">
+    <div>
+      <h2 class="section-title">Projects</h2>
+      <p class="intro">Systems I've designed and shipped, from enterprise platforms to products I built from scratch.</p>
+    </div>
+    <div role="group" aria-label="Filter projects" class="filters">
+      {filters.map((f) => (
+        <button type="button" class="filter" data-filter={f} aria-pressed={f === 'All' ? 'true' : 'false'}>{f}</button>
+      ))}
+    </div>
+  </div>
+
+  <ul class="grid" role="list">
+    {projects.map((p) => (
+      <li data-cat={p.cat}><ProjectTile project={p} /></li>
+    ))}
+  </ul>
+
+  <p class="also">Also shipped: insurance fraud detection (+30% detection), bank customer segmentation (+20% retention, +30% cross-selling), tourism and cash-flow forecasting, and urban mobility analytics behind a $300K infrastructure decision.</p>
+</section>
+
+<ProjectDialog projects={projects} />
+
+<style>
+  .projects {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+
+  .head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .intro {
+    margin: 10px 0 0;
+    font-size: 17px;
+    color: var(--muted);
+  }
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .filter {
+    font: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    min-height: 40px;
+    padding: 0 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--ink);
+  }
+
+  .filter[aria-pressed='true'] {
+    border-color: var(--ink);
+    background: var(--ink);
+    color: var(--bg);
+  }
+
+  .grid {
+    margin: 32px 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+  }
+
+  .grid li[hidden] { display: none; }
+
+  .also {
+    margin: 24px 0 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  @media (max-width: 600px) {
+    .projects { padding-top: 48px; padding-bottom: 72px; }
+    /* 44px tap targets on phones. */
+    .filter { min-height: 44px; }
+  }
+</style>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
+  const items = document.querySelectorAll<HTMLLIElement>('#projects li[data-cat]');
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const pick = button.dataset.filter;
+      buttons.forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
+      items.forEach((item) => {
+        item.hidden = pick !== 'All' && item.dataset.cat !== pick;
+      });
+    });
+  });
+</script>

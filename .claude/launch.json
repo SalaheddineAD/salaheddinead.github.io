@@ -6,6 +6,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["--prefix", "web", "run", "dev", "--", "--port", "4321"],
       "port": 4321
+    },
+    {
+      "name": "web-preview",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "web", "run", "preview", "--", "--port", "4322"],
+      "port": 4322
     }
   ]
 }

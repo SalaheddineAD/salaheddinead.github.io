@@ -1,0 +1,124 @@
+---
+import { certifications, education, jobs } from '../data/career';
+---
+
+<section id="experience" class="wrap experience">
+  <h2 class="section-title">Experience</h2>
+  <ol class="jobs" role="list">
+    {jobs.map((j) => (
+      <li class="job">
+        <p class="dates">{j.dates}</p>
+        <div class="detail">
+          <h3>{j.title}</h3>
+          <p class="org">{j.org}</p>
+          <p class="line">{j.line}</p>
+        </div>
+      </li>
+    ))}
+  </ol>
+
+  <div class="more">
+    <div class="education">
+      <h3 class="sub">Education</h3>
+      <ul class="list" role="list">
+        {education.map((e) => (
+          <li><p class="degree">{e.degree}</p><p class="where">{e.where}</p></li>
+        ))}
+      </ul>
+    </div>
+    <div class="certs">
+      <h3 class="sub">Certifications</h3>
+      <ul class="cards" role="list">
+        {certifications.map((c) => (
+          <li class:list={['cert', { pending: !c.earned }]}>
+            <p class="cert-name">{c.name}</p>
+            <p class="cert-status">{c.status}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .experience {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  .jobs {
+    margin: 32px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .job {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 40px;
+    padding: 24px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .dates { flex: 1 1 200px; margin: 0; font-size: 15px; color: var(--muted); }
+
+  .detail { flex: 999 1 520px; min-width: 0; }
+
+  .job h3 { margin: 0; font-size: 19px; font-weight: 600; }
+
+  .org { margin: 4px 0 0; font-size: 16px; color: var(--muted); }
+
+  .line { margin: 10px 0 0; font-size: 16px; line-height: 1.65; }
+
+  .more {
+    margin-top: 64px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+  }
+
+  .education { flex: 1 1 460px; min-width: 0; }
+  .certs { flex: 1 1 360px; min-width: 0; }
+
+  .sub {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .list, .cards {
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list { gap: 18px; }
+  .cards { gap: 12px; }
+
+  .degree { margin: 0; font-size: 17px; font-weight: 600; }
+  .where { margin: 4px 0 0; font-size: 15px; color: var(--muted); }
+
+  .cert {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px;
+    background: var(--card);
+  }
+
+  .cert.pending {
+    border-style: dashed;
+    background: none;
+  }
+
+  .cert-name { margin: 0; font-size: 16px; font-weight: 600; }
+  .cert-status { margin: 6px 0 0; font-size: 14px; color: var(--muted); }
+
+  @media (max-width: 600px) {
+    .experience { padding-top: 72px; padding-bottom: 72px; }
+    .detail, .education, .certs { flex-basis: 100%; }
+    .more { margin-top: 48px; }
+  }
+</style>

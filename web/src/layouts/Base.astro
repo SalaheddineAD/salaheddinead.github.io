@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import newsreaderLatin from '@fontsource-variable/newsreader/files/newsreader-latin-opsz-normal.woff2?url';
 
 interface Props {
   title: string;
@@ -19,6 +20,9 @@ const ogImage = new URL('/og.png', Astro.site);
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <!-- The hero headline is the LCP element; fetch its font early. -->
+    <link rel="preload" href={newsreaderLatin} as="font" type="font/woff2" crossorigin />
+
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />

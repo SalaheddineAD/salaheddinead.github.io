@@ -1,0 +1,187 @@
+---
+import type { Project } from '../data/projects';
+
+interface Props {
+  projects: Project[];
+}
+
+const { projects } = Astro.props;
+---
+
+<!-- Every project is rendered here so the details are in the HTML; opening shows one. -->
+<dialog class="project-dialog">
+  <button type="button" class="close" data-close aria-label="Close project details">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+  </button>
+  {projects.map((p) => (
+    <article data-project={p.id} hidden>
+      <div class="banner" style={`background: linear-gradient(140deg, var(--tint-${p.cat.toLowerCase()}));`}>
+        <p class="photo-label">{p.photoLabel}</p>
+      </div>
+      <div class="body">
+        <p class="cat">{p.cat}</p>
+        <h3 id={`project-${p.id}`}>{p.title}</h3>
+        <p class="summary">{p.summary}</p>
+        <ul class="results" role="list">
+          {p.results.map((r) => <li>{r}</li>)}
+        </ul>
+        <h4>What I did</h4>
+        <ul class="bullets">
+          {p.bullets.map((b) => <li>{b}</li>)}
+        </ul>
+        <p class="stack">{p.stack}</p>
+      </div>
+    </article>
+  ))}
+</dialog>
+
+<style>
+  .project-dialog {
+    position: fixed;
+    width: calc(100% - 40px);
+    max-width: 760px;
+    max-height: calc(100% - 96px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    margin: 48px auto;
+    padding: 0;
+    border: 0;
+    border-radius: 20px;
+    background: var(--bg);
+    color: var(--ink);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+  }
+
+  .project-dialog::backdrop { background: rgba(10, 18, 28, 0.55); }
+
+  .banner {
+    position: relative;
+    height: 200px;
+  }
+
+  .close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    z-index: 1;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 0;
+    background: rgba(255, 255, 255, 0.9);
+    color: #152536;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .photo-label {
+    position: absolute;
+    left: 20px;
+    bottom: 14px;
+    margin: 0;
+    font-size: 12px;
+    color: #FFFFFF;
+    opacity: 0.85;
+  }
+
+  .body { padding: 36px 40px 40px; }
+
+  .cat { margin: 0; font-size: 14px; color: var(--muted); }
+
+  h3 {
+    margin: 8px 0 0;
+    font-family: var(--serif);
+    font-size: 36px;
+    line-height: 1.12;
+    font-weight: 500;
+  }
+
+  .summary {
+    margin: 14px 0 0;
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--muted);
+  }
+
+  .results {
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .results li {
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: var(--soft);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  h4 { margin: 28px 0 0; font-size: 16px; font-weight: 600; }
+
+  .bullets {
+    margin: 10px 0 0;
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .bullets li { margin-bottom: 6px; }
+
+  .stack { margin: 22px 0 0; font-size: 14px; color: var(--muted); }
+
+  @media (max-width: 600px) {
+    .project-dialog { width: calc(100% - 24px); max-height: calc(100% - 24px); margin: 12px auto; }
+    .banner { height: 140px; }
+    .body { padding: 28px 22px; }
+    h3 { font-size: 30px; }
+  }
+</style>
+
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('.project-dialog')!;
+  const closeButton = dialog.querySelector<HTMLButtonElement>('[data-close]')!;
+  const articles = dialog.querySelectorAll<HTMLElement>('article[data-project]');
+  let opener: HTMLElement | null = null;
+
+  function open(id: string, trigger: HTMLElement) {
+    articles.forEach((a) => { a.hidden = a.dataset.project !== id; });
+    dialog.setAttribute('aria-labelledby', `project-${id}`);
+    opener = trigger;
+    document.body.classList.add('scroll-locked');
+    dialog.showModal();
+    dialog.scrollTop = 0;
+    closeButton.focus();
+  }
+
+  document.querySelectorAll<HTMLButtonElement>('[data-open]').forEach((tile) => {
+    tile.addEventListener('click', () => open(tile.dataset.open!, tile));
+  });
+
+  closeButton.addEventListener('click', () => dialog.close());
+
+  // Clicking the backdrop (outside the panel) closes too.
+  dialog.addEventListener('click', (e) => {
+    if (e.target === dialog) dialog.close();
+  });
+
+  // The close button is the only focusable control, so Tab stays on it.
+  dialog.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+      e.preventDefault();
+      closeButton.focus();
+    }
+  });
+
+  // Esc fires 'close' natively; restore scroll and focus in one place.
+  dialog.addEventListener('close', () => {
+    document.body.classList.remove('scroll-locked');
+    opener?.focus();
+    opener = null;
+  });
+</script>

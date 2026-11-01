@@ -1,0 +1,105 @@
+---
+import { Picture } from 'astro:assets';
+import stagePhoto from '../assets/salah-stage.jpg';
+---
+
+<section id="about" class="about">
+  <div class="wrap inner">
+    <figure class="photo">
+      <Picture
+        src={stagePhoto}
+        alt="Salah Eddine Ait Daoud speaking at a conference"
+        formats={['avif', 'webp']}
+        widths={[440, 660, 880]}
+        sizes="(max-width: 600px) calc(100vw - 32px), 440px"
+        loading="lazy"
+        decoding="async"
+      />
+      <figcaption>Presenting at [EVENT NAME], 2026</figcaption>
+    </figure>
+    <div class="text">
+      <h2 class="section-title">About me</h2>
+      <p class="lead">I've spent six years building machine learning that leaves the notebook: forecasting for Toyota's global demand planning, platforms that check billions of predictions, and AI products that turn messy regulation into decisions.</p>
+      <p class="bio">I started in Casablanca, shipping fraud detection, segmentation and energy forecasting for insurance, banking and utility clients. Since then I've led RLHF quality work for frontier LLMs at Scale AI, earned my second master's in the US, and now work as Principal Data Scientist for Toyota through Ascentt. I care about getting the evaluation right and explaining results to the people who decide.</p>
+      <div class="facts">
+        <p><span>6+ years</span>in production ML</p>
+        <p><span>100+</span>production models supported</p>
+        <p><span>10+</span>global markets</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about { background: var(--soft); }
+
+  .inner {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .photo {
+    flex: 1 1 340px;
+    min-width: 0;
+    max-width: 440px;
+    margin: 0;
+  }
+
+  .photo :global(img) {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: 45% 22%;
+    border-radius: 18px;
+  }
+
+  figcaption {
+    margin: 12px 0 0;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .text { flex: 999 1 460px; min-width: 0; }
+
+  .lead {
+    margin: 20px 0 0;
+    font-family: var(--serif);
+    font-size: 23px;
+    line-height: 1.5;
+  }
+
+  .bio {
+    margin: 18px 0 0;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+
+  .facts {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+  }
+
+  .facts p { margin: 0; font-size: 15px; color: var(--muted); }
+
+  .facts span {
+    display: block;
+    font-family: var(--serif);
+    font-size: 32px;
+    color: var(--ink);
+  }
+
+  @media (max-width: 600px) {
+    .inner { padding-top: 72px; padding-bottom: 72px; gap: 40px; }
+    .text { flex-basis: 100%; }
+    .lead { font-size: 21px; }
+  }
+</style>
