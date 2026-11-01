@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Option F: Calm and clear</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit}
+.tile .ov{opacity:0;transition:opacity .25s ease}
+.tile:hover .ov,.tile:focus-visible .ov{opacity:1}
+.tile:hover .ph{transform:scale(1.04)}
+.tile .ph{transition:transform .5s ease}
+button:focus-visible,a:focus-visible{outline:3px solid #6F98C2;outline-offset:3px}
+@media (prefers-reduced-motion: reduce){.tile .ov,.tile .ph{transition:none}}
+</style>
+</helmet>
+<div style="width: 100%; background: {{t.bg}}; color: {{t.ink}}; font-family: 'Public Sans', system-ui, sans-serif; position: relative;">
+
+<header style="position: absolute; left: 0; right: 0; top: 0; z-index: 3;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 24px 32px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;">
+<a href="#top" style="font-family: 'Newsreader', Georgia, serif; font-size: 22px; font-weight: 600; color: {{t.ink}}; text-decoration: none;">Salah Daoud</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 26px; align-items: center; font-size: 15px;">
+<a href="#projects" style="color: {{t.ink}}; text-decoration: none;">Projects</a>
+<a href="#about" style="color: {{t.ink}}; text-decoration: none;">About</a>
+<a href="#experience" style="color: {{t.ink}}; text-decoration: none;">Experience</a>
+<a href="#contact" style="color: {{t.ink}}; text-decoration: none;">Contact</a>
+<button type="button" onClick="{{toggle}}" aria-label="{{toggleLabel}}" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid {{t.line}}; background: {{t.glass}}; color: {{t.ink}}; cursor: pointer; display: inline-flex; align-items: center; justify-content: center;">
+<sc-if value="{{dark}}" hint-placeholder-val="{{ false }}">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+</sc-if>
+<sc-if value="{{light}}" hint-placeholder-val="{{ true }}">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
+</sc-if>
+</button>
+</nav>
+</div>
+</header>
+
+<section id="top" style="position: relative; height: 640px; overflow: hidden;">
+<svg viewBox="0 0 1440 640" preserveAspectRatio="xMidYMax slice" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block;">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="{{t.sky1}}"></stop>
+<stop offset="1" stop-color="{{t.sky2}}"></stop>
+</linearGradient>
+</defs>
+<rect width="1440" height="640" fill="url(#sky)"></rect>
+<path d="M0 400 L120 340 L210 370 L330 290 L430 340 L540 270 L650 330 L760 260 L880 320 L990 280 L1100 340 L1220 290 L1340 330 L1440 300 L1440 640 L0 640Z" fill="{{t.m1}}"></path>
+<path d="M0 460 L140 380 L260 430 L380 360 L500 420 L620 370 L760 440 L880 380 L1010 430 L1130 370 L1260 420 L1440 380 L1440 640 L0 640Z" fill="{{t.m2}}"></path>
+<path d="M0 530 L180 450 L320 500 L470 440 L640 510 L800 460 L960 520 L1120 460 L1300 510 L1440 480 L1440 640 L0 640Z" fill="{{t.m3}}"></path>
+<path d="M0 600 L220 540 L420 580 L640 530 L860 590 L1080 545 L1280 585 L1440 560 L1440 640 L0 640Z" fill="{{t.bg}}"></path>
+</svg>
+<div style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 170px 32px 0;">
+<h1 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 76px; line-height: 1.02; font-weight: 500; letter-spacing: -0.015em;">Salah Eddine Ait Daoud</h1>
+<p style="margin: 18px 0 0; font-size: 20px; font-weight: 500; color: {{t.ink}};">Principal Data Scientist &amp; Machine Learning Engineer</p>
+<p style="margin: 14px 0 0; max-width: 560px; font-size: 18px; line-height: 1.6; color: {{t.muted}};">I build forecasting, optimization and AI systems that companies run real decisions on. Based in Dallas, Texas.</p>
+<div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px;">
+<a href="#projects" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: {{t.ink}}; color: {{t.bg}}; text-decoration: none; font-weight: 600; font-size: 15px;">See my projects</a>
+<a href="#contact" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: {{t.glass}}; border: 1px solid {{t.line}}; color: {{t.ink}}; text-decoration: none; font-weight: 600; font-size: 15px;">Get in touch</a>
+</div>
+</div>
+</section>
+
+<section id="projects" style="max-width: 1200px; margin: 0 auto; padding: 64px 32px 96px;">
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-end; justify-content: space-between;">
+<div>
+<h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 44px; font-weight: 500;">Projects</h2>
+<p style="margin: 10px 0 0; font-size: 17px; color: {{t.muted}};">Systems I've designed and shipped, from enterprise platforms to products I built from scratch.</p>
+</div>
+<div role="group" aria-label="Filter projects" style="display: flex; flex-wrap: wrap; gap: 8px;">
+<sc-for list="{{filters}}" as="f" hint-placeholder-count="5">
+<button type="button" onClick="{{f.pick}}" aria-pressed="{{f.pressed}}" style="{{f.style}}">{{f.label}}</button>
+</sc-for>
+</div>
+</div>
+
+<div style="margin-top: 32px; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px;">
+<sc-for list="{{shown}}" as="p" hint-placeholder-count="8">
+<button type="button" class="tile" onClick="{{p.open}}" aria-label="{{p.aria}}" style="position: relative; display: block; padding: 0; border: 0; border-radius: 14px; overflow: hidden; aspect-ratio: 4 / 3; cursor: pointer; background: {{t.soft}}; text-align: left; font: inherit;">
+<div class="ph" style="{{p.photoStyle}}"></div>
+<p style="position: absolute; left: 12px; bottom: 10px; margin: 0; font-size: 11px; color: #FFFFFF; opacity: 0.85;">{{p.photoLabel}}</p>
+<div class="ov" style="position: absolute; inset: 0; background: rgba(21, 37, 54, 0.78); color: #FFFFFF; padding: 22px; display: flex; flex-direction: column; justify-content: flex-end; gap: 8px;">
+<p style="margin: 0; font-size: 13px; color: #C9DAEA;">{{p.cat}}</p>
+<p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 24px; line-height: 1.15; font-weight: 500;">{{p.title}}</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #E3ECF4;">{{p.tagline}}</p>
+<p style="margin: 6px 0 0; font-size: 13px; font-weight: 600; color: #FFFFFF;">View details</p>
+</div>
+</button>
+</sc-for>
+</div>
+<p style="margin: 24px 0 0; font-size: 15px; line-height: 1.6; color: {{t.muted}};">Also shipped: insurance fraud detection (+30% detection), bank customer segmentation (+20% retention, +30% cross-selling), tourism and cash-flow forecasting, and urban mobility analytics behind a $300K infrastructure decision.</p>
+</section>
+
+<section id="about" style="background: {{t.soft}};">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; display: flex; flex-wrap: wrap; gap: 64px; align-items: center;">
+<div style="flex: 1 1 340px; min-width: 0; max-width: 440px;">
+<img src="/_blob/16efbc91d8bb047ce0f2b1330fee2221" alt="Salah Eddine Ait Daoud speaking at a conference" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 45% 22%; border-radius: 18px;">
+<p style="margin: 12px 0 0; font-size: 13px; color: {{t.muted}};">Presenting at [EVENT NAME], 2026</p>
+</div>
+<div style="flex: 999 1 460px; min-width: 0;">
+<h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 44px; font-weight: 500;">About me</h2>
+<p style="margin: 20px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 23px; line-height: 1.5;">I've spent six years building machine learning that leaves the notebook: forecasting for Toyota's global demand planning, platforms that check billions of predictions, and AI products that turn messy regulation into decisions.</p>
+<p style="margin: 18px 0 0; font-size: 17px; line-height: 1.7; color: {{t.muted}};">I started in Casablanca, shipping fraud detection, segmentation and energy forecasting for insurance, banking and utility clients. Since then I've led RLHF quality work for frontier LLMs at Scale AI, earned my second master's in the US, and now work as Principal Data Scientist for Toyota through Ascentt. I care about getting the evaluation right and explaining results to the people who decide.</p>
+<div style="margin-top: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px;">
+<p style="margin: 0; font-size: 15px; color: {{t.muted}};"><span style="display: block; font-family: 'Newsreader', Georgia, serif; font-size: 32px; color: {{t.ink}};">6+ years</span>in production ML</p>
+<p style="margin: 0; font-size: 15px; color: {{t.muted}};"><span style="display: block; font-family: 'Newsreader', Georgia, serif; font-size: 32px; color: {{t.ink}};">100+</span>production models supported</p>
+<p style="margin: 0; font-size: 15px; color: {{t.muted}};"><span style="display: block; font-family: 'Newsreader', Georgia, serif; font-size: 32px; color: {{t.ink}};">10+</span>global markets</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="experience" style="max-width: 1200px; margin: 0 auto; padding: 96px 32px;">
+<h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 44px; font-weight: 500;">Experience</h2>
+<div style="margin-top: 32px; display: flex; flex-direction: column;">
+<sc-for list="{{jobs}}" as="j" hint-placeholder-count="4">
+<div style="display: flex; flex-wrap: wrap; gap: 6px 40px; padding: 24px 0; border-top: 1px solid {{t.line}};">
+<p style="flex: 1 1 200px; margin: 0; font-size: 15px; color: {{t.muted}};">{{j.dates}}</p>
+<div style="flex: 999 1 520px; min-width: 0;">
+<p style="margin: 0; font-size: 19px; font-weight: 600;">{{j.title}}</p>
+<p style="margin: 4px 0 0; font-size: 16px; color: {{t.muted}};">{{j.org}}</p>
+<p style="margin: 10px 0 0; font-size: 16px; line-height: 1.65;">{{j.line}}</p>
+</div>
+</div>
+</sc-for>
+</div>
+
+<div style="margin-top: 64px; display: flex; flex-wrap: wrap; gap: 48px;">
+<div style="flex: 1 1 460px; min-width: 0;">
+<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 30px; font-weight: 500;">Education</h3>
+<div style="margin-top: 20px; display: flex; flex-direction: column; gap: 18px;">
+<div><p style="margin: 0; font-size: 17px; font-weight: 600;">MSc in Computer and Data Science</p><p style="margin: 4px 0 0; font-size: 15px; color: {{t.muted}};">Maharishi International University, 2022 to 2025</p></div>
+<div><p style="margin: 0; font-size: 17px; font-weight: 600;">MSc in Software and Data Engineering</p><p style="margin: 4px 0 0; font-size: 15px; color: {{t.muted}};">National School of Applied Sciences, Khouribga, 2020 to 2022</p></div>
+<div><p style="margin: 0; font-size: 17px; font-weight: 600;">BSc in Software and Data Engineering</p><p style="margin: 4px 0 0; font-size: 15px; color: {{t.muted}};">National School of Applied Sciences, Khouribga, 2017 to 2020</p></div>
+</div>
+</div>
+<div style="flex: 1 1 360px; min-width: 0;">
+<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 30px; font-weight: 500;">Certifications</h3>
+<div style="margin-top: 20px; display: flex; flex-direction: column; gap: 12px;">
+<div style="border: 1px solid {{t.line}}; border-radius: 12px; padding: 18px; background: {{t.card}};"><p style="margin: 0; font-size: 16px; font-weight: 600;">AWS Certified Machine Learning, Specialty</p><p style="margin: 6px 0 0; font-size: 14px; color: {{t.muted}};">Earned March 2025</p></div>
+<div style="border: 1px dashed {{t.line}}; border-radius: 12px; padding: 18px;"><p style="margin: 0; font-size: 16px; font-weight: 600;">AWS Certified Generative AI Developer, Professional</p><p style="margin: 6px 0 0; font-size: 14px; color: {{t.muted}};">In progress, expected December 2026</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<section style="background: {{t.soft}};">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px;">
+<h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 44px; font-weight: 500;">What people say</h2>
+<div style="margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+<figure style="margin: 0; padding: 32px; border-radius: 16px; background: {{t.card}}; display: flex; flex-direction: column; gap: 20px;">
+<blockquote style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 21px; line-height: 1.5;">[Paste a recommendation from a manager or client here, one to three sentences.]</blockquote>
+<figcaption style="font-size: 15px;"><span style="display: block; font-weight: 600;">[Name]</span><span style="color: {{t.muted}};">[Role, Company]</span></figcaption>
+</figure>
+<figure style="margin: 0; padding: 32px; border-radius: 16px; background: {{t.card}}; display: flex; flex-direction: column; gap: 20px;">
+<blockquote style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 21px; line-height: 1.5;">[Paste a recommendation from a colleague or teammate here.]</blockquote>
+<figcaption style="font-size: 15px;"><span style="display: block; font-weight: 600;">[Name]</span><span style="color: {{t.muted}};">[Role, Company]</span></figcaption>
+</figure>
+<figure style="margin: 0; padding: 32px; border-radius: 16px; background: {{t.card}}; display: flex; flex-direction: column; gap: 20px;">
+<blockquote style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 21px; line-height: 1.5;">[Paste a third recommendation here.]</blockquote>
+<figcaption style="font-size: 15px;"><span style="display: block; font-weight: 600;">[Name]</span><span style="color: {{t.muted}};">[Role, Company]</span></figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<section id="contact" style="max-width: 1200px; margin: 0 auto; padding: 104px 32px 64px; text-align: center;">
+<h2 style="margin: 0 auto; max-width: 760px; font-family: 'Newsreader', Georgia, serif; font-size: 52px; line-height: 1.1; font-weight: 500;">Let's build something that holds up in production.</h2>
+<p style="margin: 18px 0 0; font-size: 18px; color: {{t.muted}};">I'm open to principal and staff roles in data science, ML engineering and applied AI.</p>
+<div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
+<a href="mailto:salaheddineaitdaoud@gmail.com" style="display: inline-flex; align-items: center; min-height: 50px; padding: 0 26px; border-radius: 999px; background: {{t.ink}}; color: {{t.bg}}; text-decoration: none; font-weight: 600;">Email me</a>
+<a href="https://linkedin.com/in/salah-ad" style="display: inline-flex; align-items: center; min-height: 50px; padding: 0 22px; border-radius: 999px; border: 1px solid {{t.line}}; text-decoration: none; font-weight: 600;">LinkedIn</a>
+<a href="https://github.com/SalaheddineAD" style="display: inline-flex; align-items: center; min-height: 50px; padding: 0 22px; border-radius: 999px; border: 1px solid {{t.line}}; text-decoration: none; font-weight: 600;">GitHub</a>
+</div>
+<p style="margin: 80px 0 0; font-size: 14px; color: {{t.muted}};">© 2026 Salah Eddine Ait Daoud</p>
+</section>
+
+<sc-if value="{{hasSel}}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-modal="true" aria-label="{{sel.title}}" style="position: fixed; inset: 0; z-index: 10; background: rgba(10, 18, 28, 0.55); display: flex; align-items: flex-start; justify-content: center; padding: 48px 20px; overflow-y: auto;">
+<div style="width: 100%; max-width: 760px; border-radius: 20px; background: {{t.bg}}; color: {{t.ink}}; overflow: hidden; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);">
+<div style="{{sel.bannerStyle}}">
+<button type="button" onClick="{{close}}" aria-label="Close project details" style="position: absolute; right: 16px; top: 16px; width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, 0.9); color: #152536; cursor: pointer; display: inline-flex; align-items: center; justify-content: center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+<p style="position: absolute; left: 20px; bottom: 14px; margin: 0; font-size: 12px; color: #FFFFFF; opacity: 0.85;">{{sel.photoLabel}}</p>
+</div>
+<div style="padding: 36px 40px 40px;">
+<p style="margin: 0; font-size: 14px; color: {{t.muted}};">{{sel.cat}}</p>
+<h3 style="margin: 8px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 36px; line-height: 1.12; font-weight: 500;">{{sel.title}}</h3>
+<p style="margin: 14px 0 0; font-size: 17px; line-height: 1.65; color: {{t.muted}};">{{sel.summary}}</p>
+<div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px;">
+<sc-for list="{{sel.results}}" as="r" hint-placeholder-count="2">
+<span style="padding: 8px 14px; border-radius: 999px; background: {{t.soft}}; font-size: 14px; font-weight: 600;">{{r.text}}</span>
+</sc-for>
+</div>
+<h4 style="margin: 28px 0 0; font-size: 16px; font-weight: 600;">What I did</h4>
+<ul style="margin: 10px 0 0; padding-left: 20px; font-size: 16px; line-height: 1.7;">
+<sc-for list="{{sel.bullets}}" as="b" hint-placeholder-count="3">
+<li style="margin-bottom: 6px;">{{b.text}}</li>
+</sc-for>
+</ul>
+<p style="margin: 22px 0 0; font-size: 14px; color: {{t.muted}};">{{sel.stack}}</p>
+</div>
+</div>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"startDark":{"editor":"boolean","default":false},"$preview":{"width":1440,"height":4400}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { dark: null, filter: 'All', open: null };
+  }
+  renderVals() {
+    const dark = this.state.dark === null ? !!this.props.startDark : this.state.dark;
+    const t = dark ? {
+      bg: '#0E1A27', soft: '#132434', card: '#172B3D', ink: '#E9EFF5', muted: '#A7B6C6', line: '#2A4157', glass: 'rgba(14,26,39,0.55)',
+      sky1: '#0B1622', sky2: '#22384D', m1: '#2B4258', m2: '#1E3246', m3: '#152637'
+    } : {
+      bg: '#FFFFFF', soft: '#F1F5F9', card: '#FFFFFF', ink: '#152536', muted: '#52637A', line: '#D5DFE8', glass: 'rgba(255,255,255,0.6)',
+      sky1: '#DCE8F2', sky2: '#F4F8FB', m1: '#C4D6E2', m2: '#A9C2D4', m3: '#8FAEC4'
+    };
+    const tints = {
+      'GenAI': ['#5E7FA8', '#9DB5D0'],
+      'Forecasting': ['#4F7D93', '#9CC0CF'],
+      'MLOps': ['#4C6378', '#93A8BB'],
+      'Optimization': ['#6B7F95', '#B3C2CF']
+    };
+    const P = [
+      { id: 'tariff', cat: 'GenAI', title: 'Tariff intelligence platform', tagline: 'An MVP that turns new US tariff rules into dollar impact and sourcing moves.', photoLabel: 'Photo: shipping containers at a port',
+        summary: 'I owned it end to end: problem framing, the ROI model, the production cost model and the pilot plan, then the full system. LLMs extract, retrieve and explain; deterministic Python computes every dollar figure, so no financial number comes from model output.',
+        results: ['1,811 parts modeled', '$2.0B in annual imports', '$384M in annual duty', '$205M sourcing opportunity on POC data'],
+        bullets: ['Built a pipeline that monitors the Federal Register, USTR, CBP and USITC, detects changes with content hashing, and keeps every rule version.', 'Designed a duty-stacking engine across MFN, Section 232, Section 301 and IEEPA, broken down by part, vehicle program, plant, supplier and country.', 'Built a sourcing optimizer, 12-month cost simulation and pre-buy optimizer that flag the switches worth making.', 'Built a vision agent that reads engineering drawings into material composition, verified in Python and approved by a person before use.', 'Shipped tool-calling agents with cited answers, a FastAPI backend with 23 endpoints and a React front end.'],
+        stack: 'Python, FastAPI, React, OpenAI Responses API, SQLite FTS5, BM25, Pydantic' },
+      { id: 'drift', cat: 'Forecasting', title: 'Rescuing a failing vehicle forecast', tagline: 'Found why a 12-month forecast broke: the data, not the model.', photoLabel: 'Photo: new cars lined up at a port lot',
+        summary: 'A 12-month vehicle-series forecast at Toyota had degraded badly and the obvious request was to retrain. I traced it to drift in the input data, fixed it at the source and took the root cause to senior leadership.',
+        results: ['Error 65% to 3.6%', 'Presented to senior leadership'],
+        bullets: ['Separated data problems from model problems before touching the model.', 'Fixed the upstream data and added checks so drift is caught early.', 'Turned the analysis into recommendations for senior leadership.'],
+        stack: 'Python, Spark, Databricks, MLflow' },
+      { id: 'selection', cat: 'Forecasting', title: 'Model selection across 10+ markets', tagline: 'One repeatable way to choose forecasting models worldwide.', photoLabel: 'Photo: city lights seen from above at night',
+        summary: 'Toyota’s global demand forecasting covers markets with very different time series. I built a reusable framework so model choice is systematic, not a judgment call.',
+        results: ['10+ markets', 'Reusable across teams'],
+        bullets: ['Multi-cutoff backtesting and multi-horizon metrics.', 'Variance-aware scoring that rewards consistency.', 'Hyperparameter optimization and automated ranking, running on Airflow, SageMaker, Databricks and MLflow.'],
+        stack: 'Python, Airflow, SageMaker, Databricks, MLflow' },
+      { id: 'validation', cat: 'MLOps', title: 'Validating 6 billion predictions a month', tagline: 'The platform behind 100+ Toyota and Lexus production models.', photoLabel: 'Photo: server racks in a data center',
+        summary: 'I developed and scaled the reporting and validation platform that checks every month’s predictions before they reach decisions, then rebuilt its slowest parts.',
+        results: ['100+ production models', '6B predictions a month', '60% faster'],
+        bullets: ['SQL optimization and Spark performance engineering.', 'Workflow redesign so steps run in the right order and in parallel.', 'Refactored legacy code that had grown slow and hard to maintain.'],
+        stack: 'PySpark, SQL, Databricks, Airflow' },
+      { id: 'ev', cat: 'GenAI', title: 'Decision intelligence for EV battery lines', tagline: 'KPIs and AI-written executive summaries across 4 production lines.', photoLabel: 'Photo: battery cells on an assembly line',
+        summary: 'I architected and delivered an executive platform for EV battery manufacturing that turns leadership questions into financial and operational KPIs.',
+        results: ['4 production lines', 'Dozens of KPIs', 'AI executive summaries'],
+        bullets: ['Translated senior-leadership requirements into financial and operational KPIs.', 'Automated analytics across data sources to surface cost and performance drivers.', 'Added an AI layer that analyzes month-over-month KPIs and writes executive summaries.'],
+        stack: 'Python, SQL, LLMs' },
+      { id: 'dispatch', cat: 'Optimization', title: 'Vehicle dispatch optimization', tagline: 'Better allocation of vehicles across destinations with Gurobi.', photoLabel: 'Photo: car-carrier trucks on a highway',
+        summary: 'I enhanced a Gurobi-based vehicle-dispatch optimization system, and built automation with human-in-the-loop review for an $80M operational program.',
+        results: ['+10% optimization objective', '40%+ fewer execution steps'],
+        bullets: ['Improved the optimization model and its objective by 10%.', 'Enabled more efficient vehicle allocation across destination locations.', 'Simplified an $80M program’s workflow with automation and human review.'],
+        stack: 'Python, Gurobi' },
+      { id: 'rag', cat: 'GenAI', title: 'Serverless RAG platform', tagline: 'Cited answers over 500+ pages, tested on a golden set.', photoLabel: 'Photo: rows of books in a library',
+        summary: 'An end-to-end retrieval-augmented generation system on AWS that I built and evaluated before trusting it.',
+        results: ['92% Recall@5', '0.85 MRR', '90%+ faithfulness'],
+        bullets: ['Built on Bedrock, OpenSearch Serverless, Lambda, S3 and Step Functions.', 'Hybrid retrieval, reranking, metadata filtering and source attribution.', 'Evaluated retrieval and answers against a golden set.'],
+        stack: 'AWS Bedrock, OpenSearch Serverless, Lambda, Step Functions' },
+      { id: 'energy', cat: 'Forecasting', title: 'Energy demand forecasting', tagline: 'Short- to long-term forecasts using weather and search signals.', photoLabel: 'Photo: wind turbines at sunrise',
+        summary: 'For an energy client in Morocco, I built short-, mid- and long-term forecasting of demand and production.',
+        results: ['About $2.4M annualized impact'],
+        bullets: ['Integrated weather and Google Trends as external signals.', 'Built data-quality and preprocessing pipelines.', 'Trained Prophet, GRU and Temporal Fusion Transformer models.'],
+        stack: 'Python, Prophet, PyTorch' }
+    ];
+    const cats = ['All', 'Forecasting', 'GenAI', 'MLOps', 'Optimization'];
+    const filters = cats.map((c) => {
+      const on = this.state.filter === c;
+      return {
+        label: c, pressed: on ? 'true' : 'false',
+        pick: () => this.setState({ filter: c }),
+        style: 'font: inherit; font-size: 14px; font-weight: 500; min-height: 40px; padding: 0 16px; border-radius: 999px; cursor: pointer; border: 1px solid ' + (on ? t.ink : t.line) + '; background: ' + (on ? t.ink : 'transparent') + '; color: ' + (on ? t.bg : t.ink) + ';'
+      };
+    });
+    const decorate = (p) => {
+      const c = tints[p.cat];
+      return Object.assign({}, p, {
+        aria: p.title + ', ' + p.cat + '. View details',
+        photoStyle: 'position: absolute; inset: 0; background: linear-gradient(140deg, ' + c[0] + ', ' + c[1] + ');',
+        bannerStyle: 'position: relative; height: 200px; background: linear-gradient(140deg, ' + c[0] + ', ' + c[1] + ');',
+        results: p.results.map((x) => ({ text: x })),
+        bullets: p.bullets.map((x) => ({ text: x })),
+        open: () => this.setState({ open: p.id })
+      });
+    };
+    const shown = P.filter((p) => this.state.filter === 'All' || p.cat === this.state.filter).map(decorate);
+    const selRaw = P.find((p) => p.id === this.state.open);
+    const jobs = [
+      { dates: 'May 2024 to now', title: 'Principal Data Scientist', org: 'Ascentt, client Toyota, Dallas', line: 'Forecasting across 10+ markets, a validation platform for 100+ models, EV battery decision intelligence, dispatch optimization and a tariff intelligence MVP.' },
+      { dates: 'Mar 2024 to May 2024', title: 'Data Scientist and Software Engineer, Quality Lead', org: 'HireArt, client Scale AI', line: 'Promoted to Quality Lead within a month; led evaluator calibration for RLHF and post-training of ChatGPT and Gemini.' },
+      { dates: 'Jul 2023 to Feb 2024', title: 'Machine Learning Research Assistant', org: 'Maharishi International University', line: 'Fine-tuned LLMs (+40% text-generation accuracy) and built multimodal image captioning (+20% accuracy).' },
+      { dates: 'Feb 2020 to Sep 2022', title: 'Machine Learning Engineer', org: 'Sophatel, Casablanca', line: 'Fraud detection, customer segmentation and forecasting for insurance, banking, energy, tourism and utility clients.' },
+      { dates: 'Mar 2019 to Feb 2020', title: 'Academic Researcher', org: 'National School of Applied Sciences, Khouribga', line: 'Improved the Apriori algorithm with genetic metaheuristics on Spark and Hadoop (+40% performance).' }
+    ];
+    return {
+      t, dark, light: !dark,
+      toggleLabel: dark ? 'Switch to light mode' : 'Switch to dark mode',
+      toggle: () => this.setState({ dark: !dark }),
+      filters, shown, jobs,
+      hasSel: !!selRaw,
+      sel: selRaw ? decorate(selRaw) : decorate(P[0]),
+      close: () => this.setState({ open: null })
+    };
+  }
+}
+</script>
+</body>
+</html>
