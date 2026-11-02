@@ -36,7 +36,7 @@ const initials = (name: string) => name.split(' ').map((w) => w[0]).slice(0, 2).
               >
                 <figure>
                   {photo
-                    ? <Image src={photo} alt="" width={340} height={340} class="avatar" loading="lazy" />
+                    ? <Image src={photo} alt="" width={100} height={100} class="avatar" loading="lazy" />
                     : <span class="avatar initials" aria-hidden="true">{initials(t.name)}</span>}
                   <div class="text">
                     <blockquote>{t.quote}</blockquote>
@@ -117,14 +117,14 @@ const initials = (name: string) => name.split(' ').map((w) => w[0]).slice(0, 2).
     max-width: 900px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 170px minmax(0, 1fr);
+    grid-template-columns: 128px minmax(0, 1fr);
     align-items: center;
-    gap: 56px;
+    gap: 48px;
   }
 
   .avatar {
-    width: 170px;
-    height: 170px;
+    width: 128px;
+    height: 128px;
     border-radius: 50%;
     object-fit: cover;
   }
@@ -137,7 +137,7 @@ const initials = (name: string) => name.split(' ').map((w) => w[0]).slice(0, 2).
     border: 1px solid var(--line);
     color: var(--ink);
     font-family: var(--serif);
-    font-size: 54px;
+    font-size: 42px;
   }
 
   blockquote {
@@ -226,7 +226,7 @@ const initials = (name: string) => name.split(' ').map((w) => w[0]).slice(0, 2).
       text-align: center;
       gap: 24px;
     }
-    .avatar { width: 120px; height: 120px; }
+    .avatar { width: 112px; height: 112px; }
     .initials { font-size: 40px; }
     blockquote { font-size: 18px; }
     .name, .role { display: block; }

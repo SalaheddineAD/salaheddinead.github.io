@@ -37,4 +37,10 @@ export const testimonials = [
     role: 'Co-founder & CTO, Nyance',
     photo: 'wail-benhaddou',
   },
+  {
+    quote: '“I have worked with Salah Eddine back, for several months, I can say that his knowledge and approachs in data science were always on point, taking into consideration the specifity of each problem and tackling it with the appropriate toolkit. It has been always fun and interesting to share projects with Salah.”',
+    name: 'Mohamed Taha El Bouhali',
+    role: 'Data Scientist, BCG X',
+    photo: 'mohamed-taha-el-bouhali',
+  },
 ];
