@@ -6,6 +6,12 @@
     <a href="https://linkedin.com/in/salah-ad" class="btn">LinkedIn</a>
     <a href="https://github.com/SalaheddineAD" class="btn">GitHub</a>
   </div>
+  <!-- mailto does nothing without a mail app, so the address is also shown and copyable. -->
+  <p class="address">
+    <span>salaheddineaitdaoud@gmail.com</span>
+    <button type="button" class="copy" data-copy="salaheddineaitdaoud@gmail.com">Copy</button>
+    <span class="visually-hidden" role="status" data-copy-status></span>
+  </p>
 </section>
 <footer class="wrap footer">
   <p>© 2026 Salah Eddine Ait Daoud</p>
@@ -39,6 +45,32 @@
   .links .btn { min-height: 50px; font-size: 16px; padding: 0 22px; }
   .links .btn-primary { padding: 0 26px; }
 
+  .address {
+    margin: 20px 0 0;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 4px 10px;
+    font-size: 16px;
+    color: var(--muted);
+  }
+
+  .copy {
+    min-height: 44px;
+    padding: 0 16px;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    background: none;
+    color: var(--ink);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .copy:hover { background: var(--soft); }
+
   .footer {
     padding-top: 80px;
     padding-bottom: 64px;
@@ -54,3 +86,25 @@
     .footer { padding-top: 64px; padding-bottom: 48px; }
   }
 </style>
+
+<script>
+  const button = document.querySelector<HTMLButtonElement>('[data-copy]')!;
+  const status = document.querySelector<HTMLElement>('[data-copy-status]')!;
+
+  button.addEventListener('click', async () => {
+    const address = button.dataset.copy!;
+    try {
+      await navigator.clipboard.writeText(address);
+      button.textContent = 'Copied';
+      status.textContent = 'Email address copied';
+    } catch {
+      // Clipboard blocked: select the address so it can be copied by hand.
+      const range = document.createRange();
+      range.selectNodeContents(button.previousElementSibling!);
+      getSelection()?.removeAllRanges();
+      getSelection()?.addRange(range);
+      status.textContent = 'Email address selected';
+    }
+    window.setTimeout(() => { button.textContent = 'Copy'; status.textContent = ''; }, 2000);
+  });
+</script>

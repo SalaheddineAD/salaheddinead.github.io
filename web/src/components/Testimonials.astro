@@ -14,54 +14,59 @@ const initials = (name: string) => name.split(' ').map((w) => w[0]).slice(0, 2).
 ---
 
 <section class="testimonials" aria-labelledby="testimonials-title">
-  <div class="wrap inner carousel" aria-roledescription="carousel" aria-labelledby="testimonials-title" data-carousel>
+  <div class="wrap inner">
     <h2 id="testimonials-title" class="section-title">What people say</h2>
 
-    <div class="viewport">
-      <div class="track" aria-live="off" data-track>
-        {testimonials.map((t, i) => {
-          const photo = photoFor(t.photo);
-          return (
-            <div
-              class="slide"
-              role="group"
-              aria-roledescription="slide"
-              aria-label={`${i + 1} of ${testimonials.length}`}
-              data-slide
-            >
-              <figure>
-                <blockquote>{t.quote}</blockquote>
-                <figcaption>
-                  {photo
-                    ? <Image src={photo} alt="" width={96} height={96} class="avatar" loading="lazy" />
-                    : <span class="avatar initials" aria-hidden="true">{initials(t.name)}</span>}
-                  <span><span class="name">{t.name}</span><span class="role">{t.role}</span></span>
-                </figcaption>
-              </figure>
-            </div>
-          );
-        })}
-      </div>
-    </div>
+    <div class="carousel" aria-roledescription="carousel" aria-labelledby="testimonials-title" data-carousel>
+      <button type="button" class="ctrl prev" data-prev aria-label="Previous recommendation">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>
+      </button>
 
-    <div class="controls">
-      <div class="dots">
-        {testimonials.map((t, i) => (
-          <button type="button" class="dot" data-dot={i} aria-label={`Show recommendation from ${t.name}`} aria-current={i === 0 ? 'true' : 'false'}>
-            <span aria-hidden="true"></span>
-          </button>
-        ))}
+      <div class="viewport">
+        <div class="track" aria-live="off" data-track>
+          {testimonials.map((t, i) => {
+            const photo = photoFor(t.photo);
+            return (
+              <div
+                class="slide"
+                role="group"
+                aria-roledescription="slide"
+                aria-label={`${i + 1} of ${testimonials.length}`}
+                data-slide
+              >
+                <figure>
+                  {photo
+                    ? <Image src={photo} alt="" width={340} height={340} class="avatar" loading="lazy" />
+                    : <span class="avatar initials" aria-hidden="true">{initials(t.name)}</span>}
+                  <div class="text">
+                    <blockquote>{t.quote}</blockquote>
+                    <figcaption>
+                      <span class="name">{t.name}</span>
+                      <span class="role">{t.role}</span>
+                    </figcaption>
+                  </div>
+                </figure>
+              </div>
+            );
+          })}
+        </div>
       </div>
-      <div class="arrows">
-        <button type="button" class="ctrl" data-pause aria-label="Pause rotation">
-          <svg class="icon-pause" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"></rect><rect x="14" y="5" width="4" height="14" rx="1"></rect></svg>
-          <svg class="icon-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"></path></svg>
-        </button>
-        <button type="button" class="ctrl" data-prev aria-label="Previous recommendation">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>
-        </button>
-        <button type="button" class="ctrl" data-next aria-label="Next recommendation">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+
+      <button type="button" class="ctrl next" data-next aria-label="Next recommendation">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+      </button>
+
+      <div class="controls">
+        <div class="dots">
+          {testimonials.map((t, i) => (
+            <button type="button" class="dot" data-dot={i} aria-label={`Show recommendation from ${t.name}`} aria-current={i === 0 ? 'true' : 'false'}>
+              <span aria-hidden="true"></span>
+            </button>
+          ))}
+        </div>
+        <button type="button" class="ctrl pause" data-pause aria-label="Pause rotation">
+          <svg class="icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"></rect><rect x="14" y="5" width="4" height="14" rx="1"></rect></svg>
+          <svg class="icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"></path></svg>
         </button>
       </div>
     </div>
@@ -69,39 +74,29 @@ const initials = (name: string) => name.split(' ').map((w) => w[0]).slice(0, 2).
 </section>
 
 <style>
-  .testimonials { background: var(--soft); }
-
-  /* Wide screens: heading and controls on the left, the quote on the right.
-     Narrow screens: heading, quote, controls stacked. */
   .inner {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 96px;
+    padding-bottom: 88px;
+  }
+
+  .section-title { text-align: center; }
+
+  /* Wide screens: arrows sit on either side of the quote.
+     Narrow screens: the quote takes the full width and the arrows join the dots below. */
+  .carousel {
+    margin-top: 48px;
     display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: 'title' 'viewport' 'controls';
-    row-gap: 16px;
+    grid-template-columns: 56px minmax(0, 1fr) 56px;
+    grid-template-areas: 'prev viewport next' '. controls .';
+    align-items: center;
+    column-gap: 16px;
+    row-gap: 24px;
   }
 
-  .section-title { grid-area: title; margin-bottom: 20px; }
-  .viewport { grid-area: viewport; min-width: 0; }
+  .prev { grid-area: prev; }
+  .next { grid-area: next; }
+  .viewport { grid-area: viewport; min-width: 0; overflow: hidden; }
   .controls { grid-area: controls; }
-
-  @media (min-width: 900px) {
-    .inner {
-      grid-template-columns: 340px minmax(0, 1fr);
-      grid-template-rows: auto 1fr;
-      grid-template-areas: 'title viewport' 'controls viewport';
-      column-gap: 48px;
-    }
-    .section-title { margin-bottom: 0; }
-    .controls { align-self: end; flex-wrap: wrap; }
-  }
-
-  .viewport {
-    overflow: hidden;
-    border-radius: 16px;
-    box-shadow: var(--card-shadow);
-  }
 
   /* Slides sit side by side; the track slides left. Every slide takes the
      height of the tallest one, so the section never jumps between quotes. */
@@ -113,40 +108,23 @@ const initials = (name: string) => name.split(' ').map((w) => w[0]).slice(0, 2).
   .slide {
     flex: 0 0 100%;
     min-width: 0;
-    padding: 40px 48px;
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    background: var(--card);
+    display: flex;
+    align-items: center;
   }
 
   figure {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 28px;
-  }
-
-  blockquote {
-    margin: 0;
-    max-width: 62ch;
-    font-family: var(--serif);
-    font-size: 24px;
-    line-height: 1.5;
-  }
-
-  figcaption {
-    display: flex;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 170px minmax(0, 1fr);
     align-items: center;
-    gap: 14px;
-    font-size: 15px;
+    gap: 56px;
   }
 
   .avatar {
-    flex: none;
-    width: 48px;
-    height: 48px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     object-fit: cover;
   }
@@ -155,20 +133,32 @@ const initials = (name: string) => name.split(' ').map((w) => w[0]).slice(0, 2).
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: var(--ink);
-    color: var(--bg);
-    font-weight: 600;
-    font-size: 15px;
+    background: var(--soft);
+    border: 1px solid var(--line);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 54px;
   }
 
-  .name { display: block; font-weight: 600; }
-  .role { color: var(--muted); }
+  blockquote {
+    margin: 0;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 21px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  figcaption { margin-top: 20px; font-size: 16px; }
+  .name { font-weight: 600; color: var(--ink); }
+  .role { font-style: italic; font-size: 14px; color: var(--muted); }
+  .role::before { content: ' · '; font-style: normal; }
 
   .controls {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
+    justify-content: center;
+    gap: 8px;
   }
 
   .dots { display: flex; }
@@ -199,33 +189,52 @@ const initials = (name: string) => name.split(' ').map((w) => w[0]).slice(0, 2).
     background: var(--ink);
   }
 
-  .arrows { display: flex; gap: 6px; }
-
   .ctrl {
     width: 44px;
     height: 44px;
+    padding: 0;
     border-radius: 50%;
-    border: 1px solid var(--line-strong);
-    background: var(--card);
-    color: var(--ink);
+    border: 0;
+    background: none;
+    color: var(--muted);
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    transition: color 0.2s ease, background-color 0.2s ease;
   }
+
+  .ctrl:hover { color: var(--ink); background: var(--soft); }
+  .prev, .next { width: 56px; height: 56px; }
 
   .icon-play { display: none; }
   .ctrl[data-paused] .icon-play { display: block; }
   .ctrl[data-paused] .icon-pause { display: none; }
 
-  @media (max-width: 600px) {
-    .inner { padding-top: 72px; padding-bottom: 72px; }
-    .slide { padding: 24px; }
-    blockquote { font-size: 19px; }
+  @media (max-width: 760px) {
+    .inner { padding-top: 72px; padding-bottom: 64px; }
+    .carousel {
+      margin-top: 32px;
+      grid-template-columns: 44px minmax(0, 1fr) 44px;
+      grid-template-areas: 'viewport viewport viewport' 'prev controls next';
+      column-gap: 8px;
+    }
+    .prev, .next { width: 44px; height: 44px; }
+    figure {
+      grid-template-columns: minmax(0, 1fr);
+      justify-items: center;
+      text-align: center;
+      gap: 24px;
+    }
+    .avatar { width: 120px; height: 120px; }
+    .initials { font-size: 40px; }
+    blockquote { font-size: 18px; }
+    .name, .role { display: block; }
+    .role::before { content: none; }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .track, .dot span { transition: none; }
+    .track, .dot span, .ctrl { transition: none; }
   }
 </style>
 
