@@ -46,9 +46,9 @@ can't be pushed again.
 ## If the page still looks the same after a deploy
 
 - Hard refresh: Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac), or open a private window.
-- If the domain sits behind CloudFront, its cache can serve the previous version
-  for a while. In the AWS console, open CloudFront, select the distribution, go to
-  **Invalidations** and create one for `/*`.
+- The domain is served through CloudFront, whose cache can show the previous
+  version for a while. To clear it now: in the AWS console, open CloudFront, select
+  the distribution, go to **Invalidations** and create one for `/*`.
 
 ## Nothing else changes
 
