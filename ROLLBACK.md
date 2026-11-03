@@ -47,8 +47,43 @@ can't be pushed again.
 
 - Hard refresh: Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac), or open a private window.
 - The domain is served through CloudFront, whose cache can show the previous
-  version for a while. To clear it now: in the AWS console, open CloudFront, select
+  version for a while. Deploys of the new site clear it automatically once the
+  setup below is done. A rollback to `v1.1.5`'s commit uses the old workflow,
+  which doesn't, so clear it by hand: in the AWS console, open CloudFront, select
   the distribution, go to **Invalidations** and create one for `/*`.
+
+## One-time setup: automatic cache clearing
+
+The deploy workflow clears CloudFront's cache after each upload, but only once
+these two things exist. Until then that step is skipped and the deploy still works.
+
+1. **Give the deploy key permission.** In the AWS console, open **IAM** and find
+   the user whose access key is in the GitHub secret `AWS_ACCESS_KEY_ID`. Under
+   **Add permissions**, choose **Create inline policy**, switch to **JSON** and paste
+   this, replacing the account number and distribution ID with yours:
+
+   ```json
+   {
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Effect": "Allow",
+         "Action": "cloudfront:CreateInvalidation",
+         "Resource": "arn:aws:cloudfront::123456789012:distribution/E1ABCDEF2GHIJK"
+       }
+     ]
+   }
+   ```
+
+   The account number is in the top-right menu of the AWS console. The
+   distribution ID is the **ID** column on the CloudFront page (it starts with `E`).
+
+2. **Tell GitHub the distribution.** In the repository on GitHub, open
+   **Settings > Secrets and variables > Actions > New repository secret**. Name it
+   `CLOUDFRONT_DISTRIBUTION_ID` and paste the distribution ID as the value.
+
+The next tag you push runs the new step. In the run's log on GitHub, the
+"Invalidate CloudFront cache" step should show a green check.
 
 ## Nothing else changes
 
