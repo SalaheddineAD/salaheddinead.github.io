@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://salahdaoud.com/sitemap-index.xml
+Sitemap: https://www.salahdaoud.com/sitemap-index.xml
